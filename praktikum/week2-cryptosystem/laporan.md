@@ -114,8 +114,6 @@ Berbeda dengan sistem asimetris yang menggunakan pasangan kunci publik dan priva
 3. Mengapa distribusi kunci menjadi masalah utama dalam kriptografi simetris?  
 jawab: Iya karena distribusi kunci menjadi masalah utama dalam kriptografi simetris sebab menggunakan satu kunci yang sama untuk proses enkripsi dan dekripsi. Artinya, pengirim dan penerima pesan harus memiliki kunci yang identik sebelum komunikasi dimulai. Jika kunci tersebut dikirim melalui jaringan yang tidak aman, maka ada risiko pihak ketiga yanyg dapat mencuri kunci tersebut dan membaca seluruh isi pesan yang terenkripsi.
 
-Selain itu, semakin banyak pengguna yang terlibat dalam komunikasi, semakin kompleks proses distribusi kuncinya jadi setiap pasangan pengguna membutuhkan kunci unik agar pesan tidak saling terbaca, sshingga jumlah kunci yang harus dikelola meningkat secara signifikan. Hal inilah yang membuat distribusi dan manajemen kunci menjadi tantangan besar dalam sistem kriptografi simetris.
----
 
 ## 8. Kesimpulan
 
@@ -130,7 +128,7 @@ Dari hasil praktikum yang telah dilakukan, dapat disimpulkan bahwa proses enkrip
 
 commit abc12345
 Author: Ratna Rizka Maharani <ratnarizka033@gmail.com>
-Date:   2025-09-20
+Date:   11-10-2025
 
     week2-cryptosystem: implementasi Caesar Cipher dan laporan )
 ```
