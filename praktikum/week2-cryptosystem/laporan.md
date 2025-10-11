@@ -1,25 +1,30 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 2
+Topik: Cryptosystem 
+Nama: Ratna Rizka Maharani
+NIM: 230202778
+Kelas: 5IKRA
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+- Mengidentifikasi mengenai komponen dasar kriptosistem (plainttext, ciphertext, kunci, algoritma)
+- Menggambarkan tentang proses enkripsi dan deskripsi sederhana
+- Mengklasifikasi jenis kriptosistem (simetris dan asimetris)
 
 ---
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
+Jadi Kriptografi merupakan ilmu yang mempelajari teknik menjaga kerahasiaan, keaslian, dan integritas data dengan cara mengubah pesan asli (plaintext) menjadi bentuk tidak terbaca yaoitu(ciphertext). Proses ini disebut enkripsi, sedangkan proses mengembalikan ciphertext ke bentuk semula disebut dekripsi.
+
+Sebuah kriptosistem terdiri dari beberapa komponen utama, yakni plaintext, ciphertext dan enkripsi/dekripsi, dan kunci (key). Algoritma adalah aturan/rumus yang digunakan untuk melakukan transformasi, sedangkan kunci menjadi parameter rahasia yang menentukan hasil dari enkripsi.
+
+Sehingga umumnya terdapat dua jenis sistem kriptografi, yaitu kriptografi simetris dan kriptografi asimetris bedanya yaitu Kriptografi simetris menggunakan satu kunci yang sama untuk enkripsi dan dekripsi, misalnya Caesar Cipher, DES, dan AES. Sedangkan kriptografi asimetris menggunakan dua kunci berbeda, yaitu public key untuk enkripsi dan private key untuk dekripsi, misalnya RSA dan ECC.
 
 ---
 
 ## 3. Alat dan Bahan
-(- Python 3.x  
+(- Python 3.12.10 
 - Visual Studio Code / editor lain  
 - Git dan akun GitHub  
 - Library tambahan (misalnya pycryptodome, jika diperlukan)  )
@@ -29,9 +34,9 @@ Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
 ## 4. Langkah Percobaan
 (Tuliskan langkah yang dilakukan sesuai instruksi.  
 Contoh format:
-1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
+1. Membuat file `simple_crypto.py` di folder `praktikum/week2-cryptosystem/src/`.
 2. Menyalin kode program dari panduan praktikum.
-3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
+3. Menjalankan program dengan perintah `python simple_crypto.py`.)
 
 ---
 
@@ -41,8 +46,36 @@ Gunakan blok kode:
 
 ```python
 # contoh potongan kode
-def encrypt(text, key):
-    return ...
+def encrypt(plaintext, key):
+    result = ""
+    for char in plaintext:
+        if char.isalpha():
+            shift = 65 if char.isupper() else 97
+            result += chr((ord(char) - shift + key) % 26 + shift)
+        else:
+            result += char
+    return result
+
+def decrypt(ciphertext, key):
+    result = ""
+    for char in ciphertext:
+        if char.isalpha():
+            shift = 65 if char.isupper() else 97
+            result += chr((ord(char) - shift - key) % 26 + shift)
+        else:
+            result += char
+    return result
+
+if __name__ == "__main__":
+    message = "<nim><nama>"
+    key = 5
+
+    enc = encrypt(message, key)
+    dec = decrypt(enc, key)
+
+    print("Plaintext :", message)
+    print("Ciphertext:", enc)
+    print("Decrypted :", dec)
 ```
 )
 
@@ -56,39 +89,47 @@ def encrypt(text, key):
 
 Hasil eksekusi program Caesar Cipher:
 
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
+![Diagram Kriptosistem](screenshots/diagram_kriptosistem.png)
+![Hasil Eksekusi](screenshots/hasil_eksekusi.png)
+
 )
 
 ---
 
 ## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
+1. Sebutkan komponen utama dalam sebuah kriptosistem. 
+jawab: BERIKUT KOMPONEN UTAMA DALAM SEBUAH KRIPTOSISTEM:
+       a. Plaintext yaitu pesan asli yang ingin dikirim.
+       b. Ciphertext adalah pesan yang sudah dienkripsi (hasil penyandian).
+       c. Algoritma enkripsi yaitu proses atau aturan untuk mengubah plaintext menjadi ciphertext.
+       d. Algoritma dekripsi adalah proses untuk mengubah ciphertext kembali menjadi plaintext.
+       e. Kunci (key) yaitu nilai rahasia yang digunakan dalam proses enkripsi dan dekripsi.
+
+2. Apa kelebihan dan kelemahan sistem simetris dibandingkan asimetris?
+jawab: Sistem kriptografi simetris memiliki kelebihan utama yaitu dalam hal kecepatan dan efisiensi, Karena hanya menggunakan satu kunci untuk proses enkripsi dan dekripsi, algoritma simetris dapat memproses data dengan lebih cepat dibandingkan sistem asimetris sehingga cocok digunakan untuk mengenkripsi data dalam jumlah besar, seperti file atau komunikasi real-time. Selain itu, implementasinya relatif sederhana serta membutuhkan sumber daya komputasi yang lebih rendah. Sedangkan 
+
+Sistem simetris memiliki kelemahan yang cukup signifikan dibandingkan sistem asimetris. Masalahnya terletak pada distribusi kunci karena kunci yang sama digunakan oleh pengirim dan penerima, maka kunci tersebut harus dikirim melalui saluran yang aman. Jika kunci ini jatuh ke tangan pihak yang tidak berwenang, seluruh keamanan sistem dapat terancam. 
+Berbeda dengan sistem asimetris yang menggunakan pasangan kunci publik dan privat, sistem simetris tidak memiliki mekanisme alami untuk mengamankan pertukaran kunci, sehingga rentan terhadap serangan penyadapan selama proses distribusi kunci.
+
+3. Mengapa distribusi kunci menjadi masalah utama dalam kriptografi simetris?  
+jawab: Iya karena distribusi kunci menjadi masalah utama dalam kriptografi simetris sebab menggunakan satu kunci yang sama untuk proses enkripsi dan dekripsi. Artinya, pengirim dan penerima pesan harus memiliki kunci yang identik sebelum komunikasi dimulai. Jika kunci tersebut dikirim melalui jaringan yang tidak aman, maka ada risiko pihak ketiga yanyg dapat mencuri kunci tersebut dan membaca seluruh isi pesan yang terenkripsi.
+
+Selain itu, semakin banyak pengguna yang terlibat dalam komunikasi, semakin kompleks proses distribusi kuncinya jadi setiap pasangan pengguna membutuhkan kunci unik agar pesan tidak saling terbaca, sshingga jumlah kunci yang harus dikelola meningkat secara signifikan. Hal inilah yang membuat distribusi dan manajemen kunci menjadi tantangan besar dalam sistem kriptografi simetris.
 ---
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
 
----
+Dari hasil praktikum yang telah dilakukan, dapat disimpulkan bahwa proses enkripsi dan dekripsi adalah inti dari sistem kriptografi. Enkripsi berfungsi untuk mengubah plaintext menjadi ciphertext agar pesan tidak dapat dibaca oleh pihak yang tidak berwenang, sedangkan dekripsi untuk mengembalikan ciphertext menjadi plaintext semula jadi dengan bantuan kunci yang sesuai. Melalui percobaan ini, dipahami bahwa keamanan data sangat bergantung pada algoritma dan kunci yang digunakan dalam proses kriptografi.
 
-## 9. Daftar Pustaka
-(Cantumkan referensi yang digunakan.  
-Contoh:  
+## 9. Daftar Pustaka 
 - Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
 - Stallings, W. *Cryptography and Network Security*.  )
 
----
 
 ## 10. Commit Log
-(Tuliskan bukti commit Git yang relevan.  
-Contoh:
-```
+
 commit abc12345
-Author: Nama Mahasiswa <email>
+Author: Ratna Rizka Maharani <ratnarizka033@gmail.com>
 Date:   2025-09-20
 
     week2-cryptosystem: implementasi Caesar Cipher dan laporan )
