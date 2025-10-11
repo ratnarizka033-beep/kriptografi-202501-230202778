@@ -1,25 +1,31 @@
 # Laporan Praktikum Kriptografi
 Minggu ke-: 1
-Topik: [judul praktikum]  
-Nama: [Ratna Rizka Maharani]  
-NIM: [230202778]  
-Kelas: [5IKRB]  
+Topik: [Sejarah Kriptografi & Prinsip CIA]  
+Nama: Ratna Rizka Maharani
+NIM: 230202778
+Kelas: 5IKRB
 
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+- Menjelaskan tentang sejarah dan evolusi kriptogarfi dari masa klasik hingga masa modern.
+- Menyebutkan tentang prinsip confidentiality, integrity , availabilty (CIA) dengan benar.
+- Menyimpulkan peran kriptografi dalam sistem keamanan informasi modern.
+- Menyiapkan mengenai repositori Github sebagai media  kerja praktikum.
 
 ---
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
+Kriptografi adalah ilmu yang mempelajari tentang teknik untuk mengamankan pesan dengan cara menyandikan informasi sehingga tidak dapat dipahami oleh pihak yang tidak berwenang. Pada masa klasik, metode kriptografi sederhana seperti Caesar Cipher dan Vigenère Cipher digunakan untuk menyamarkan pesan kemudian Prinsip utama dari cipher klasik yaitu melakukan substitusi (penggantian huruf dengan huruf lain) atau transposisi (pertukaran posisi huruf) agar pesan asli (plaintext) sulit dibaca tanpa kunci tertentu.
 
----
+Selain itu, kriptografi memanfaatkan konsep aritmetika modular dengan Operasi yang digunakan dalam berbagai algoritma enkripsi, baik klasik maupun modern. Contohnya, pada Caesar Cipher, setiap huruf di geser sejauh n posisi menggunakan perhitungan mod 26 (jumlah huruf alfabet). Prinsip ini juga menjadi dasar dalam sistem kriptografi modern seperti RSA yang menggunakan modulus bilangan prima sangat besar agar sulit dipecahkan.
+
+Di era modern saat ini kriptografi tidak hanya fokus pada penyandian pesan, tetapi menjamin aspek Confidentiality, Integrity, dan Availability (CIA). Contohnya algoritma AES (Advanced Encryption Standard) untuk menjaga kerahasiaan data, sedangkan fungsi hash seperti SHA-256 dipergunakan untuk memastikan integritas data. Seiring perkembangan teknologi digital, kriptografi menjadi pilar utama dalam keamanan sistem informasi dan komunikasi internet, transaksi keuangan, setrta tanda tangan digital.
+
+--- 
 
 ## 3. Alat dan Bahan
-(- Python 3.x  
+(- Python 3.12.10 
 - Visual Studio Code / editor lain  
 - Git dan akun GitHub  
 - Library tambahan (misalnya pycryptodome, jika diperlukan)  )
@@ -29,7 +35,7 @@ Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
 ## 4. Langkah Percobaan
 (Tuliskan langkah yang dilakukan sesuai instruksi.  
 Contoh format:
-1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
+1. Membuat file `code.-example.py` di folder `praktikum/week1-intro-cia/src/`.
 2. Menyalin kode program dari panduan praktikum.
 3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
 
@@ -49,47 +55,47 @@ def encrypt(text, key):
 ---
 
 ## 6. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
+- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
 - Berikan tabel atau ringkasan hasil uji jika diperlukan.  
 - Jelaskan apakah hasil sesuai ekspektasi.  
 - Bahas error (jika ada) dan solusinya. 
 
-Hasil eksekusi program Caesar Cipher:
+Bukti hasil repo dan contoh CIA:
 
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
+![Repo Setup](screenshots/repo_setup.png)
+![Contoh CIA](screenshots/cia_example.png)
 
 ---
 
 ## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- Pertanyaan 1: …  
-- Pertanyaan 2: …  
-)
+1. Siapa tokoh yang dianggap sebagai bapak kriptografi modern? 
+jawab:bapak kriptografi modern adalah Claude E. Shannon.
+
+2. Sebutkan algoritma kunci publik yang populer digunakan saat ini.  
+jawab:RSA (Rivest–Shamir–Adleman), ElGamal, ECC (Elliptic Curve Cryptography), DSA (Digital Signature Algorithm), Diffie–Hellman Key Exchange
+
+3. Apa perbedaan utama antara kriptografi klasik dan kriptografi modern?  
+jawab:kriptografi klasik menggunakan operasi sederhana dengan substitusi dan transposisi pada huruf, dengan satu kunci yang sama yaitu enkripsi dan dekripsi. sedangkan
+kriptografi modern menggunakan algoritma kompleks  dan bekerja pada bit atau blok data, dengan sistem kunci simetris ataupun sistematis yang jauh lebih aman.
 ---
 
 ## 8. Kesimpulan
-(Tuliskan kesimpulan singkat (2–3 kalimat) berdasarkan percobaan.  )
+Pada minggu pertama matakuliah kriptografi memberikan pemahaman mendalam tentang Sejarah Kriptografi dari era klasik hingga modern serta penerapan dalam kemanan digital. pentingnya menjaga keamanan data melalui teknik penyandian informasi. Mahasiswa mempelajari konsep dasar CIA untuk melindungi data dan sistem seperti enkripsi, dekripsi, kunci, cipher klasik, hingga penerapan kriptografi modern yang berbasis matematika dan algoritma kompleks. Pembelajaran ini menumbuhkan kesadaran akan pentingnya kerahasiaan, keaslian, dan integritas data dalam sistem informasi digital.
+
+Selain itu, mata kuliah ini melatih kemampuan analitis mahasiswa dalam memahami cara kerja algoritma keamanan seperti AES, RSA, dan ECC yang digunakan dalam teknologi modern. Dengan memahami prinsip dasar kriptografi, mahasiswa diharapkan mampu menerapkan konsep keamanan informasi pada berbagai sistem digital, serta berkontribusi dalam pengembangan teknologi yang aman dan terpercaya di era siber saat ini.
 
 ---
 
 ## 9. Daftar Pustaka
-(Cantumkan referensi yang digunakan.  
-Contoh:  
 - Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
-- Stallings, W. *Cryptography and Network Security*.  )
+- Stallings, W. *Cryptography and Network Security*.  
 
 ---
 
 ## 10. Commit Log
-(Tuliskan bukti commit Git yang relevan.  
-Contoh:
-```
 commit abc12345
-Author: Nama Mahasiswa <email>
-Date:   2025-09-20
+Author: Ratna Rizka Maharani <ratnarizka033@gmail.com>
+Date:   11-10-2025
 
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
+    week1-intro-cia
 ```
