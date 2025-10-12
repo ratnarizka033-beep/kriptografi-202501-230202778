@@ -3,7 +3,7 @@ Minggu ke-: 2
 Topik: Cryptosystem 
 Nama: Ratna Rizka Maharani
 NIM: 230202778
-Kelas: 5IKRA
+Kelas: 5IKRB
 
 ---
 
@@ -89,7 +89,7 @@ if __name__ == "__main__":
 
 Hasil eksekusi program Caesar Cipher:
 
-![Diagram Kriptosistem](screenshots/diagram_kriptosistem.png)
+![Diagram Kriptosistem](screenshots/diagram_kriptosistemrtnarizka.png)
 ![Hasil Eksekusi](screenshots/hasil_eksekusi.png)
 
 )
@@ -117,12 +117,12 @@ jawab: Iya karena distribusi kunci menjadi masalah utama dalam kriptografi simet
 
 ## 8. Kesimpulan
 
-Dari hasil praktikum yang telah dilakukan, dapat disimpulkan bahwa proses enkripsi dan dekripsi adalah inti dari sistem kriptografi. Enkripsi berfungsi untuk mengubah plaintext menjadi ciphertext agar pesan tidak dapat dibaca oleh pihak yang tidak berwenang, sedangkan dekripsi untuk mengembalikan ciphertext menjadi plaintext semula jadi dengan bantuan kunci yang sesuai. Melalui percobaan ini, dipahami bahwa keamanan data sangat bergantung pada algoritma dan kunci yang digunakan dalam proses kriptografi.
+Dari hasil praktikum yang telah dilakukan, dapat disimpulkan bahwa proses enkripsi dan dekripsi adalah inti dari sistem kriptografi jadi Enkripsi berfungsi untuk mengubah plaintext menjadi ciphertext agar pesan tidak dapat dibaca oleh pihak yang tidak berwenang, sedangkan dekripsi untuk mengembalikan ciphertext menjadi plaintext semula dengan bantuan kunci yang sesuai. Melalui percobaan ini, dipahami bahwa keamanan data sangat bergantung pada algoritma dan kunci yang digunakan dalam proses dalam kriptografi.
 
 ## 9. Daftar Pustaka 
 - Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
 - Stallings, W. *Cryptography and Network Security*.  )
-
+-
 
 ## 10. Commit Log
 
