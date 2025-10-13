@@ -130,7 +130,7 @@ Dari hasil praktikum yang telah dilakukan, dapat disimpulkan bahwa proses enkrip
 
 commit abc12345
 Author: Ratna Rizka Maharani <ratnarizka033@gmail.com>
-Date:   11-10-2025
+Date:   JUMAT, 10 oktober 2025
 
     week2-cryptosystem: implementasi Caesar Cipher dan laporan )
 ```
