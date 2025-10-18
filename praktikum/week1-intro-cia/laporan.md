@@ -1,6 +1,6 @@
 # Laporan Praktikum Kriptografi
 Minggu ke-: 1
-Topik: [Sejarah Kriptografi & Prinsip CIA]  
+Topik: Sejarah Kriptografi & Prinsip CIA
 Nama: Ratna Rizka Maharani
 NIM: 230202778
 Kelas: 5IKRB
@@ -89,13 +89,14 @@ Selain itu, mata kuliah ini melatih kemampuan analitis mahasiswa dalam memahami 
 ## 9. Daftar Pustaka
 - Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
 - Stallings, W. *Cryptography and Network Security*.  
-
+- Kessler, G. C. (2019). An Overview of Cryptography. In Handbook on Local Area Networks (pp. 1–23). CRC Press.
+- Menezes, A. J., van Oorschot, P. C., & Vanstone, S. A. (1996). Handbook of Applied Cryptography. CRC Press.
 ---
 
 ## 10. Commit Log
 commit abc12345
 Author: Ratna Rizka Maharani <ratnarizka033@gmail.com>
-Date:   11-10-2025
+Date:   RABU, 1 oktober 2025
 
     week1-intro-cia
 ```
