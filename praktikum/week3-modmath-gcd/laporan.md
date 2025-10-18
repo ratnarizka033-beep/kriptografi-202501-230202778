@@ -18,8 +18,7 @@ Konsep modular aritmetika menjadi dasar penting dalam kriptografi klasik maupun 
 
 Cipher klasik merupakan sistem kriptografi yang digunakan pada masa awal perkembangan ilmu kriptografi, sebelum munculnya komputer modern. Cipher ini bekerja dengan cara mengubah susunan huruf dengan simbol tertentu berdasarkan aturan tertentu yang mudah dilakukan secara manual. Contoh cipher yaitu Caesar Cipher dan Vigenère Cipher, Transposition Cipher.
 
-Algoritma Euchliden digunakan untuk mencari GCD 
-Logaritma diskrit merupakan 
+Algoritma Euclidean digunakan untuk mencari GCD (Greatest Common Divisor) atau Faktor Persekutuan Terbesar (FPB) antara dua bilangan secara efisien. GCD penting dalam teori bilangan karena menentukan apakah dua bilangan saling relatif  prima.
 
 Secara keseluruhan, cipher klasik dan konsep modular aritmetika saling berkaitan dalam membentuk dasar dari berbagai teknik enkripsi awal. Walaupun cipher klasik kini dianggap kurang aman karena dapat dengan mudah dipecahkan menggunakan analisis frekuensi atau komputer, prinsip-prinsip matematis seperti modular aritmetika tetap menjadi fondasi penting dalam sistem kriptografi modern, termasuk pada algoritma kunci publik seperti RSA dan ElGamal.
 
@@ -138,7 +137,9 @@ Aritmetika modular memungkinkan pengolahan bilangan besar dengan hasil yang teta
 Contoh:  
 - Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
 - Stallings, W. *Cryptography and Network Security*.  )
--
+- Paar, C., & Pelzl, J. (2010). Understanding Cryptography: A Textbook for Students and Practitioners. Springer.
+- Trappe, W., & Washington, L. C. (2006). Introduction to Cryptography with Coding Theory (2nd ed.). Pearson.
+- Singh, S. (1999). The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography. Anchor Books
 ---
 
 ## 10. Commit Log
