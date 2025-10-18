@@ -91,5 +91,5 @@ commit abc12345
 Author: Nama Mahasiswa <email>
 Date:   2025-09-20
 
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
+  week4-entropy-unicity  : implementasi Caesar Cipher dan laporan )
 ```
