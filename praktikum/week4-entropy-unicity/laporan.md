@@ -72,6 +72,7 @@ Contoh format:
 ---
 
 ## 5. Source Code
+```python
 import math
 
 def entropy(keyspace_size):
@@ -105,9 +106,7 @@ print("Waktu brute force AES-128 =", brute_force_time(2**128), "hari")
 
 Hasil eksekusi program Caesar Cipher:
 
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
+![Hasil Eksekusi](screenshots/hasil.png)
 )
 
 ---
@@ -160,7 +159,7 @@ Contoh:
 ```
 commit abc12345
 Author: Ratna Rizka Maharani <230202778>
-Date:   2025-09-20
+Date:   2025-10-25 sabtu
 
   week4-entropy-unicity  : implementasi Caesar Cipher dan laporan )
 ```
