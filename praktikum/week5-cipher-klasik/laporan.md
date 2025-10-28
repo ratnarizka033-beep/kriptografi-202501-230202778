@@ -1,9 +1,9 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: [judul praktikum]  
-Nama: [Nama Mahasiswa]  
-NIM: [NIM Mahasiswa]  
-Kelas: [Kelas]  
+Minggu ke-: 5
+Topik: chiper-klasik  
+Nama:     Ratna Rizka Maharani
+NIM: 230202778
+Kelas: 5IKRA
 
 ---
 
@@ -19,7 +19,7 @@ Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
 ---
 
 ## 3. Alat dan Bahan
-(- Python 3.x  
+(- Python 3.12.10
 - Visual Studio Code / editor lain  
 - Git dan akun GitHub  
 - Library tambahan (misalnya pycryptodome, jika diperlukan)  )
@@ -80,7 +80,7 @@ Hasil eksekusi program Caesar Cipher:
 Contoh:  
 - Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
 - Stallings, W. *Cryptography and Network Security*.  )
-
+-
 ---
 
 ## 10. Commit Log
