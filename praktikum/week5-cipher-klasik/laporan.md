@@ -1,8 +1,8 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: X  
-Topik: Cipher Klasik (Caesar, Vigenère, Transposisi)
-Nama: Ratna Rizka Maharani
-NIM: 230202778 
+Minggu ke-: 5
+Topik: chiper-klasik  
+Nama:     Ratna Rizka Maharani
+NIM: 230202778
 Kelas: 5IKRB
 
 ---
