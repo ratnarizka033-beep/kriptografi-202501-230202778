@@ -22,7 +22,7 @@ DES (Data Encryption Standard) merupakan algoritma blok simetris dengan panjang 
 
 AES (Advanced Encryption Standard) merupakan pengganti DES standar modern sehingga AES ini menggunakan panjang kunci 128, 192, atau 256 bit panjangnya. AES bekerja pada blok 128 bit menggunakan operasi substitusi, pergeseran baris, dan pencampuran kolom. Keunggulan AES yaitu kecepatan tinggi dan tingkat keamanan kuat terhadap serangan kriptanalisis.
 
-RSA (Rivest–Shamir–Adleman) merupakan algoritma kunci publik (asimetris) yang menggunakan dua kunci yaitu kunci publik untuk enkripsi dan kunci privat untuk dekripsi. Keamanannya bergantung pada kesulitan faktorisasi bilangan prima dalam jumlh besar. RSA digunakan luas dalam komunikasi aman, tanda tangan digital, dan pertukaran kunci.
+RSA (Rivest–Shamir–Adleman) adalah algoritma kunci publik (asimetris) yang menggunakan dua kunci yaitu kunci publik untuk enkripsi dan kunci privat untuk dekripsi. Keamanannya bergantung pada kesulitan faktorisasi bilangan prima dalam jumlh besar. RSA digunakan luas dalam komunikasi aman, tanda tangan digital, dan pertukaran kunci.
 ---
 
 ## 3. Alat dan Bahan
@@ -45,6 +45,44 @@ Contoh format:
 ## 5. Source Code
 Salin kode program utama yang dibuat atau dimodifikasi.  
 Gunakan blok kode:
+Kode sumber des.py
+```python
+from Crypto.Cipher import DES
+from Crypto.Random import get_random_bytes
+
+key = get_random_bytes(8)  # kunci 64 bit (8 byte)
+cipher = DES.new(key, DES.MODE_ECB)
+
+plaintext = b"ABCDEFGH"
+ciphertext = cipher.encrypt(plaintext)
+print("Ciphertext:", ciphertext)
+
+decipher = DES.new(key, DES.MODE_ECB)
+decrypted = decipher.decrypt(ciphertext)
+print("Decrypted:", decrypted)
+```
+
+Kode sumber aes.py
+```python
+from Crypto.Cipher import AES
+from Crypto.Random import get_random_bytes
+
+key = get_random_bytes(16)  # 128 bit key
+cipher = AES.new(key, AES.MODE_EAX)
+
+plaintext = b"Modern Cipher AES Example"
+ciphertext, tag = cipher.encrypt_and_digest(plaintext)
+
+print("Ciphertext:", ciphertext)
+
+# Dekripsi
+cipher_dec = AES.new(key, AES.MODE_EAX, nonce=cipher.nonce)
+decrypted = cipher_dec.decrypt(ciphertext)
+print("Decrypted:", decrypted.decode())
+```
+---
+Kode sumber rsa.py
+### Langkah 3 — Implementasi RSA
 ```python
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
@@ -67,7 +105,12 @@ print("Decrypted:", decrypted.decode())
 ```
 ---
 
-Hasil eksekusi program Caesar Cipher:
+---
+
+6. Berikan tabel atau ringkasan hasil uji jika diperlukan.
+- Menjelaskan apakah hasil sesuai ekspektasi.
+- Bahas error (jika ada) dan solusinya.
+- Hasil eksekusi program Caesar Cipher:
 
 ![Hasil aes](screenshots/aes.png)
 ![Hasil des](screenshots/des.png)
