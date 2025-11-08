@@ -1,5 +1,5 @@
 # Laporan Praktikum Kriptografi
-Minggu ke-: 5
+Minggu ke-: 6
 Topik: chiper-klasik  
 Nama:     Ratna Rizka Maharani
 NIM: 230202778

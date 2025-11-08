@@ -120,7 +120,7 @@ Struktur akhir folder:
 praktikum/week6-cipher-modern/
  ├─ src/aes.py
  ├─ src/rsa.py
- ├─ src/des.py (opsional)
+ ├─ src/(des.py opsional)
  ├─ screenshots/
  │   └─ hasil.png
  └─ laporan.md
