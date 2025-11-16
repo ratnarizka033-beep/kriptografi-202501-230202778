@@ -138,13 +138,13 @@ Jadi pada praktikum ini dapat disimpulkan bahwasanya algoritma diatas telah berh
 ## 9. Daftar Pustaka
 Cantumkan referensi yang saya gunakan.  
 Contoh:  
-- Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
+- Katz, J., & Lindell, Y. Introduction to Modern Cryptography*.  
 - Stallings, W. *Cryptography and Network Security*.  
 - PyCryptodome Documentation: https://pycryptodome.readthedocs.io
 - Paar, C., & Pelzl, J. (2010). Understanding Cryptography: A Textbook for Students and Practitioners. Springer.
 - Trappe, W., & Washington, L. C. (2006). Introduction to Cryptography with Coding Theory (2nd ed.). Pearson.
 - Singh, S. (1999). The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography. Anchor Books
- Menezes, A. J., van Oorschot, P. C., & Vanstone, S. A. (1996). Handbook of Applied Cryptography. CRC Press.
+- Menezes, A. J., van Oorschot, P. C., & Vanstone, S. A. (1996). Handbook of Applied Cryptography. CRC Press.
 ---
 
 ## 10. Commit Log
