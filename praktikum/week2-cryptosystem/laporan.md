@@ -121,7 +121,7 @@ Dari hasil praktikum yang telah dilakukan, dapat disimpulkan bahwa proses enkrip
 
 ## 9. Daftar Pustaka 
 - Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
-- Stallings, W. *Cryptography and Network Security*.  )
+- Stallings, W. *Cryptography and Network Security*.  
 - Schneier, B. (2015). Applied Cryptography: Protocols, Algorithms, and Source Code in C (20th Anniversary ed.). Wiley.
 - Menezes, A. J., van Oorschot, P. C., & Vanstone, S. A. (1996). Handbook of Applied Cryptography. CRC Press.
 - Singh, S. (1999). The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography. Anchor Books.
@@ -132,5 +132,5 @@ commit abc12345
 Author: Ratna Rizka Maharani <ratnarizka033@gmail.com>
 Date:   JUMAT, 10 oktober 2025
 
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan )
+    week2-cryptosystem: implementasi Caesar Cipher dan laporan 
 ```
