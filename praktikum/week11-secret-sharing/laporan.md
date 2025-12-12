@@ -8,7 +8,7 @@ Kelas: 5IKRA
 ---
 
 ## 1. Tujuan
-Tujuan praktikum ini menurut saya adalah untuk memahami konsep dasar dari Shamir’s Secret Sharing (SSS) sebagai salah satu metode pembagian rahasia secara aman. Mahasiswa diharapkan mampu mengimplementasikan algoritma secret sharing menggunakan Python, baik dengan library maupun secara manual menggunakan operasi polinomial. Selain itu, mahasiswa diharapkan dapat melakukan rekonstruksi rahasia menggunakan sejumlah share tertentu serta menganalisis aspek keamanan dari mekanisme threshold pada skema SSS.
+Jasi tujuan dari praktikum ini menurut saya adalah untuk memahami konsep dasar dari Shamir’s Secret Sharing (SSS) sebagai salah satu metode pembagian rahasia secara aman. Mahasiswa diharapkan mampu mengimplementasikan algoritma secret sharing menggunakan Python, baik dengan library maupun secara manual menggunakan operasi polinomial. Selain itu, mahasiswa diharapkan dapat melakukan rekonstruksi rahasia menggunakan sejumlah share tertentu serta menganalisis aspek keamanan dari mekanisme threshold pada skema SSS.
 ---
 
 ## 2. Dasar Teori
@@ -64,10 +64,11 @@ print("Recovered secret:", recovered)
 - Jelaskan apakah hasil sesuai ekspektasi.  
 - Bahas error (jika ada) dan solusinya. 
 
+Hasil eksekusi program Caesar Cipher:
 
-![Hasil eksekusi](screenshots/secret_sharing.png)
-![Hasil Input](screenshots/secret_sharing1.png)
-![Hasil Output](screenshots/secret_sharing2.png)
+![Hasil Eksekusi](screenshots/secret_sharing.png)
+![Hasil Input](screenshots/input.png)
+![Hasil Output](screenshots/output.png)
 )
 
 ---
