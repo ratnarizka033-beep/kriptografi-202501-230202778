@@ -9,7 +9,7 @@ Kelas: 5IKRA
 
 ## 1. Tujuan
 (Tuliskan tujuan pembelajaran praktikum sesuai modul.)
-Tujuan dari praktikum ini menurut saya agar memberikan pemahaman yang komprehensif mengenai konsep dasar blockchain dengan fokus pada peran fungsi hash dan mekanisme Proof of Work (PoW). Melalui praktikum ini, mahasiswa diharapkan mampu mengimplementasikan blockchain sederhana menggunakan bahasa pemrograman Python, memahami proses mining blok, serta menganalisis bagaimana PoW berkontribusi terhadap keamanan dan keandalan sistem cryptocurrency. Selain itu, praktikum ini juga bertujuan melatih kemampuan analisis mahasiswa terhadap kelebihan dan keterbatasan PoW dalam penerapan nyata.
+Tujuan dari praktikum ini menurut saya agar memberikan pemahaman yang komprehensif mengenai konsep dasar blockchain dengan fokus pada peran fungsi hash dan mekanisme Proof of Work (PoW). Melalui praktikum ini, mahasiswa diharapkan mampu mengimplementasikan blockchain sederhana menggunakan bahasa pemrograman Python, sehingga memahami proses mining blok, serta menganalisis bagaimana PoW berkontribusi terhadap keamanan dan keandalan sistem cryptocurrency. Selain itu, praktikum ini juga bertujuan melatih kemampuan analisis mahasiswa terhadap kelebihan dan keterbatasan PoW dalam penerapan nyata.
 ---
 
 ## 2. Dasar Teori

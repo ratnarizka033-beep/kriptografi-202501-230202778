@@ -8,7 +8,7 @@ Kelas: 5IKRA
 ---
 
 ## 1. Tujuan
-Jasi tujuan dari praktikum ini menurut saya adalah untuk memahami konsep dasar dari Shamir’s Secret Sharing (SSS) sebagai salah satu metode pembagian rahasia secara aman. Mahasiswa diharapkan mampu mengimplementasikan algoritma secret sharing menggunakan Python, baik dengan library maupun secara manual menggunakan operasi polinomial. Selain itu, mahasiswa diharapkan dapat melakukan rekonstruksi rahasia menggunakan sejumlah share tertentu serta menganalisis aspek keamanan dari mekanisme threshold pada skema SSS.
+Jadi menurut saya tujuan dari praktikum ini adalah untuk memahami konsep dasar dari Shamir’s Secret Sharing (SSS) sebagai salah satu metode pembagian rahasia secara aman. Mahasiswa diharapkan mampu mengimplementasikan algoritma secret sharing menggunakan Python, baik dengan library maupun secara manual menggunakan operasi polinomial. Selain itu, mahasiswa diharapkan dapat melakukan rekonstruksi rahasia menggunakan sejumlah share tertentu serta menganalisis aspek keamanan dari mekanisme threshold pada skema SSS.
 ---
 
 ## 2. Dasar Teori
@@ -100,7 +100,7 @@ Skenario ini menunjukkan bahwa SSS bukan hanya teori matematika, tetapi merupaka
 ## 8. Kesimpulan
 Praktikum ini berhasil menunjukkan bagaimana Shamir’s Secret Sharing bekerja dalam membagi dan merekonstruksi sebuah rahasia menggunakan pendekatan threshold. Program yang dibuat berhasil menghasilkan beberapa share dan mengembalikan rahasia ketika jumlah share memenuhi syarat. Secara keseluruhan, SSS merupakan metode yang sangat aman dan efektif untuk pengelolaan rahasia dalam sistem keamanan modern.
 
-Selain itu, praktikum ini juga memberikan pemahaman yang lebih nyata mengenai bagaimana konsep matematika seperti polinomial dan interpolasi Lagrange diterapkan langsung dalam dunia kriptografi. Melalui implementasi program, terlihat bahwa perubahan nilai threshold maupun jumlah share dapat memengaruhi fleksibilitas dan tingkat keamanan sistem. Dengan demikian, mahasiswa tidak hanya memahami teori Secret Sharing secara abstrak, tetapi juga melihat bagaimana mekanisme tersebut bekerja secara teknis dalam proses pembangkitan share dan rekonstruksi rahasia. Praktikum ini menunjukkan bahwa Shamir’s Secret Sharing sangat relevan sebagai dasar dalam membangun sistem keamanan data yang membutuhkan kolaborasi dan kontrol akses terdistribusi.
+Selain itu, praktikum ini juga memberikan pemahaman yang lebih nyata mengenai bagaimana konsep matematika seperti polinomial dan interpolasi Lagrange diterapkan langsung dalam dunia kriptografi. Melalui implementasi program, terlihat bahwa perubahan nilai threshold maupun jumlah share dapat memengaruhi fleksibilitas dan tingkat keamanan sistem. Dengan demikian, mahasiswa tidak hanya memahami teori Secret Sharing secara abstrak, tetapi juga melihat bagaimana mekanisme tersebut bekerja secara teknis dalam proses pembangkitan share dan rekonstruksi rahasia. Praktikum ini menunjukkan bahwa Shamir’s Secret Sharing ini sangat relevan sebagai dasar dalam membangun sistem keamanan data yang membutuhkan kolaborasi dan kontrol akses terdistribusi.
 
 ---
 
