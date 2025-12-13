@@ -59,7 +59,7 @@ print("Recovered secret:", recovered)
 ---
 
 ## 6. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
+- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
 - Berikan tabel atau ringkasan hasil uji jika diperlukan.  
 - Jelaskan apakah hasil sesuai ekspektasi.  
 - Bahas error (jika ada) dan solusinya. 
@@ -67,9 +67,8 @@ print("Recovered secret:", recovered)
 Hasil eksekusi program Caesar Cipher:
 
 ![Hasil Eksekusi](screenshots/secret_sharing.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
+![Hasil Input](screenshots/secret_sharing1.png)
+![Hasil Output](screenshots/secret_sharing2.png)
 
 ---
 
