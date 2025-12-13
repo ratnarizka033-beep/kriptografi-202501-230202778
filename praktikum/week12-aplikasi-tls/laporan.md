@@ -16,11 +16,12 @@ Transport Layer Security (TLS) merupakan protokol keamanan standar yang digunaka
 
 Pada prosesnya, TLS dimulai dengan TLS Handshake, yakni fase di mana client dan server saling bertukar informasi kriptografi. Handshake mencakup pertukaran versi TLS, cipher suites, sertifikat digital server, dan pembuatan session key melalui algoritma seperti RSA atau Diffie-Hellman. Setelah handshake berhasil, komunikasi aman menggunakan symmetric encryption seperti AES.
 
-TLS sangat penting dalam layanan berbasis web, terutama HTTPS. Sertifikat digital digunakan untuk membuktikan identitas server dan mencegah serangan man-in-the-middle. Sertifikat ini dikeluarkan oleh CA (Certificate Authority) yang dipercaya secara  global. Dengan demikian, TLS menjadi pondasi utama keamanan pada transaksi online, e-commerce, login akun, email, API, dan hampir seluruh komunikasi berbasis internet.
+Selain itu, TLS juga berperan penting dalam membangun kepercayaan antara client dan server melalui penggunaan sertifikat digital yang dikeluarkan oleh Certificate Authority (CA). Sertifikat ini memungkinkan client memverifikasi identitas server sehingga mencegah serangan seperti man-in-the-middle. Dengan adanya mekanisme enkripsi dan autentikasi yang kuat, TLS banyak diterapkan pada berbagai layanan internet modern, seperti HTTPS pada web, email, dan aplikasi berbasis cloud. Hal ini menjadikan TLS sebagai fondasi utama dalam menjaga keamanan, privasi, dan keandalan pertukaran data di era digital.
+
 ---
 
 ## 3. Alat dan Bahan
-(- Python 3.11
+(- Python 3.12.10
 - Visual Studio Code / editor lain  
 - Git dan akun GitHub  
 - Library tambahan (misalnya pycryptodome, jika diperlukan)  )
@@ -73,7 +74,10 @@ Jawab: Transport Layer Security (TLS) sangat penting dalam komunikasi internet k
 Jawab: Sertifikat digital berfungsi sebagai identitas resmi suatu server atau entitas dalam proses komunikasi TLS. Sertifikat ini diterbitkan oleh Certificate Authority (CA) terpercaya dan mengandung informasi penting seperti nama domain, kunci publik, serta tanda tangan digital dari CA. Dalam proses handshake TLS, browser atau client akan memeriksa sertifikat tersebut untuk memastikan bahwa server yang dihubungi benar-benar valid dan bukan server palsu yang dibuat oleh penyerang. Jika sertifikat tidak valid atau dipalsukan, TLS akan memberikan peringatan dan menghentikan koneksi. Selain memberikan autentikasi, sertifikat digital juga menjadi dasar pertukaran kunci rahasia yang digunakan dalam proses enkripsi selama sesi komunikasi. Dengan demikian, sertifikat digital adalah elemen inti yang memungkinkan TLS bekerja secara aman dan terpercaya.
 
 - 3. Mengapa HTTPS lebih aman dibanding HTTP?
-jawab: HTTPS lebih aman dibanding HTTP karena HTTPS menggunakan protokol TLS untuk melindungi data yang dikirim dan diterima melalui jaringan. Pada HTTP biasa, data dikirim dalam bentuk plaintext tanpa enkripsi, sehingga siapa pun yang berada di jalur komunikasi dapat membaca seluruh informasi seperti password, nomor kartu kredit, atau data pribadi lainnya. Namun pada HTTPS, seluruh data dienkripsi sehingga hanya pengirim dan penerima yang dapat memahaminya. Selain enkripsi, HTTPS juga menyediakan autentikasi melalui sertifikat digital, sehingga mencegah serangan seperti spoofing atau man-in-the-middle. HTTPS juga menjaga integritas data, memastikan bahwa pesan tidak dapat diubah tanpa diketahui selama proses pengiriman. Oleh karena itu, HTTPS digunakan sebagai standar keamanan dalam aplikasi web modern dan merupakan syarat utama untuk transaksi sensitif seperti perbankan, login akun, dan e-commerce.
+jawab: HTTPS lebih aman dibandingkan HTTP karena menggunakan protokol SSL/TLS untuk mengenkripsi data yang dikirimkan antara client dan server. Dengan adanya enkripsi, informasi sensitif seperti username, password, data pribadi, dan informasi pembayaran tidak dapat dibaca atau dimodifikasi oleh pihak ketiga yang tidak berwenang, meskipun data tersebut berhasil disadap di tengah perjalanan jaringan. Sebaliknya, HTTP mengirimkan data dalam bentuk teks biasa (plaintext), sehingga sangat rentan terhadap serangan penyadapan (sniffing) dan pencurian data.
+
+Selain enkripsi, HTTPS juga menyediakan mekanisme autentikasi dan integritas data melalui sertifikat digital. Sertifikat ini memastikan bahwa pengguna benar-benar terhubung ke server yang sah, sehingga mengurangi risiko serangan man-in-the-middle dan pemalsuan situs web. Integritas data menjamin bahwa informasi yang dikirim tidak diubah selama proses transmisi. Dengan kombinasi enkripsi, autentikasi, dan integritas tersebut, HTTPS memberikan tingkat keamanan yang jauh lebih tinggi dibandingkan HTTP dan menjadi standar wajib dalam komunikasi web modern.
+
 )
 ---
 
@@ -100,7 +104,7 @@ Contoh:
 ```
 commit 8ac93f1c2d9a12ab4d22faa11c8e9b331f20ae77
 Author: Ratna Rizka Maharani <ratnarizka033gmail.com>
-Date:   12 desember 2025
+Date:   Friday 12 desember 2025 pukul 13.59
 
     week12-aplikasi-tls: implementasi aplikasi tls (Transport Layer Security) dan laporan )
 ```
