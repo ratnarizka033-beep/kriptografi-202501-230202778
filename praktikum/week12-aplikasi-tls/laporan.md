@@ -118,24 +118,6 @@ Hasil eksekusi program Caesar Cipher:
 ![Hasil aplikasi_tls](screenshots/)screenshots/output.png)
 ![Hasil Input](screenshots/aplikasi_tls1.png)
 ![Hasil aplikasi_tls2](screenshots/aplikasi_tls2.png)
-)
-![Hasil ](screenshots/aplikasi_tls.png)
-![Hasil Input](screenshots/inputaplikasi_tls1.png)
-![Hasil aplikasi_tls2](screenshots/aplikasi_tls2.png)
-
-<p align="center">
-  <img src="screenshots/input.png" width="45%">
-  <img src="screenshots/aplikasi_tls1.png" width="45%">
-</p>
-
-### Hasil Eksekusi Program
-
-**Input Program**
-![Input](screenshots/input.png)
-
-**Tampilan Aplikasi (aplikasi_tls1)**
-![Aplikasi TLS 1](screenshots/aplikasi_tls.png)
-
 
 -
 
