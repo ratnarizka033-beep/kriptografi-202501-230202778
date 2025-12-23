@@ -38,32 +38,106 @@ Contoh format:
 ---
 
 ## 5. Source Code
-(Salin kode program utama yang dibuat atau dimodifikasi.  
-Gunakan blok kode:
+
 
 ```python
 # contoh potongan kode
 def encrypt(text, key):
     return ...
-```
-)
+import ssl
+import socket
+from datetime import datetime
 
----
+def tls_connection(hostname, port=443):
+    print("=" * 60)
+    print("SIMULASI KONEKSI TLS (Transport Layer Security)")
+    print("=" * 60)
+
+    # Membuat context TLS standar
+    context = ssl.create_default_context()
+
+    # Membuat socket TCP
+    with socket.create_connection((hostname, port)) as sock:
+        # Membungkus socket dengan TLS
+        with context.wrap_socket(sock, server_hostname=hostname) as tls_socket:
+            print(f"[INFO] Berhasil terhubung ke {hostname}:{port}")
+            print(f"[INFO] Versi TLS      : {tls_socket.version()}")
+            print(f"[INFO] Cipher Suite   : {tls_socket.cipher()[0]}")
+            print("-" * 60)
+
+            # Mengambil sertifikat server
+            cert = tls_socket.getpeercert()
+
+            print("INFORMASI SERTIFIKAT DIGITAL")
+            print("-" * 60)
+
+            subject = dict(x[0] for x in cert['subject'])
+            issuer = dict(x[0] for x in cert['issuer'])
+
+            print(f"Nama Domain (CN) : {subject.get('commonName')}")
+            print(f"Issuer (CA)      : {issuer.get('commonName')}")
+
+            not_before = cert['notBefore']
+            not_after = cert['notAfter']
+
+            print(f"Berlaku Mulai    : {not_before}")
+            print(f"Berlaku Hingga   : {not_after}")
+
+            print("-" * 60)
+
+            # Cek masa berlaku sertifikat
+            expire_date = datetime.strptime(not_after, "%b %d %H:%M:%S %Y %Z")
+            if expire_date > datetime.utcnow():
+                print("[STATUS] Sertifikat MASIH VALID")
+            else:
+                print("[STATUS] Sertifikat SUDAH KADALUARSA")
+
+            print("=" * 60)
+            print("KONEKSI TLS AMAN BERHASIL DILAKUKAN")
+            print("=" * 60)
+
+
+if __name__ == "__main__":
+    # Ganti domain sesuai kebutuhan praktikum
+    target_domain = "www.tokopedia.com"
+    tls_connection(target_domain)
+
+
+
 
 ## 6. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
+- Lampirkan screenshot hasil eksekusi program taruh di folder `## 6. Hasil dan Pembahasan
+- Lampirkan screenshot hasil eksekusi program (taruh di folder 'screenshots/`).  
 - Berikan tabel atau ringkasan hasil uji jika diperlukan.  
 - Jelaskan apakah hasil sesuai ekspektasi.  
 - Bahas error (jika ada) dan solusinya. 
 
 Hasil eksekusi program Caesar Cipher:
 
-![Hasil Eksekusi](screenshots/output.png)
-![Hasil Input](screenshots/input.png)
-![Hasil Output](screenshots/output.png)
-)
 
----
+![Hasil aplikasi_tls](screenshots/)screenshots/output.png)
+![Hasil Input](screenshots/aplikasi_tls1.png)
+![Hasil aplikasi_tls2](screenshots/aplikasi_tls2.png)
+)
+![Hasil ](screenshots/aplikasi_tls.png)
+![Hasil Input](screenshots/inputaplikasi_tls1.png)
+![Hasil aplikasi_tls2](screenshots/aplikasi_tls2.png)
+
+<p align="center">
+  <img src="screenshots/input.png" width="45%">
+  <img src="screenshots/aplikasi_tls1.png" width="45%">
+</p>
+
+### Hasil Eksekusi Program
+
+**Input Program**
+![Input](screenshots/input.png)
+
+**Tampilan Aplikasi (aplikasi_tls1)**
+![Aplikasi TLS 1](screenshots/aplikasi_tls.png)
+
+
+-
 
 ## 7. Jawaban Pertanyaan
 (Jawab pertanyaan diskusi yang diberikan pada modul.  
@@ -79,13 +153,13 @@ jawab: HTTPS lebih aman dibandingkan HTTP karena menggunakan protokol SSL/TLS un
 Selain enkripsi, HTTPS juga menyediakan mekanisme autentikasi dan integritas data melalui sertifikat digital. Sertifikat ini memastikan bahwa pengguna benar-benar terhubung ke server yang sah, sehingga mengurangi risiko serangan man-in-the-middle dan pemalsuan situs web. Integritas data menjamin bahwa informasi yang dikirim tidak diubah selama proses transmisi. Dengan kombinasi enkripsi, autentikasi, dan integritas tersebut, HTTPS memberikan tingkat keamanan yang jauh lebih tinggi dibandingkan HTTP dan menjadi standar wajib dalam komunikasi web modern.
 
 )
----
+
 
 ## 8. Kesimpulan
 Berdasarkan percobaan, dapat disimpulkan bahwa TLS merupakan protokol vital dalam pengamanan komunikasi internet modern. Program Python yang dijalankan berhasil menunjukkan proses koneksi aman, pengambilan sertifikat digital, serta penggunaan enkripsi TLS. Dengan demikian, mahasiswa memahami bagaimana TLS bekerja dalam sistem nyata seperti HTTPS dan mengapa protokol ini sangat penting dalam menjaga keamanan data.
 
 Selain itu, praktikum ini juga memperlihatkan bagaimana proses verifikasi sertifikat dan negosiasi cipher suite dilakukan secara otomatis oleh protokol, sehingga pengguna dapat memastikan integritas dan autentikasi server tanpa perlu melakukan konfigurasi manual. Melalui simulasi dan analisis hasil eksekusi program, mahasiswa dapat memahami potensi ancaman seperti serangan man-in-the-middle ketika sertifikat tidak valid, serta menyadari pentingnya peran Certificate Authority (CA) dalam ekosistem TLS. Dengan pemahaman ini, mahasiswa lebih siap menerapkan konsep keamanan jaringan pada aplikasi nyata dan mampu mengevaluasi apakah suatu koneksi benar-benar aman atau tidak.
----
+
 
 ## 9. Daftar Pustaka
 (Cantumkan referensi yang digunakan.  
@@ -93,18 +167,18 @@ Contoh:
 - Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
 - Stallings, W. *Cryptography and Network Security*.  )
 - Shamir, A. (1979). “How to Share a Secret.” Communications of the ACM.
-- Trappe, W., & Washington, L. C. (2006). Introduction to Cryptography with Coding Theory (2nd ed.). Pearson.
+- Trappe, W., & Washington, L. C. (2006). Introduction to Cryptography with Coding Theory ( ed.). Pearson.
 - Singh, S. (1999). The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography. Anchor Books
 - Menezes, A. J., van Oorschot, P. C., & Vanstone, S. A. (1996). Handbook of Applied Cryptography. CRC Press.
----
+
 
 ## 10. Commit Log
-(Tuliskan bukti commit Git yang relevan.  
+Tuliskan bukti commit Git yang relevan.  
 Contoh:
 ```
 commit 8ac93f1c2d9a12ab4d22faa11c8e9b331f20ae77
 Author: Ratna Rizka Maharani <ratnarizka033gmail.com>
 Date:   Friday 12 desember 2025 pukul 13.59
 
-    week12-aplikasi-tls: implementasi aplikasi tls (Transport Layer Security) dan laporan )
+    week12-aplikasi-tls: implementasi aplikasi tls (Transport Layer Security) dan laporan 
 ```

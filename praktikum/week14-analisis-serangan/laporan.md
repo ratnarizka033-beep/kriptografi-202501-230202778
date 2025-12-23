@@ -9,13 +9,19 @@ Kelas: 5IKRA
 
 ## 1. Tujuan
 (Tuliskan tujuan pembelajaran praktikum sesuai modul.)
+Tujuan dari praktikum menurut saya Analisis Serangan Kriptografi ini untuk memberikan pemahaman yang mendalam kepada mahasiswa mengenai berbagai jenis serangan yang dapat terjadi pada sistem kriptografi dalam dunia nyata. Melalui praktikum ini, mahasiswa diharapkan mampu mengidentifikasi bentuk serangan kriptografi yang umum, seperti brute force attack, dictionary attack, dan man-in-the-middle attack, juga memahami bagaimana serangan tersebut dapat mengeksploitasi kelemahan sistem keamanan.
 
+Selain itu, praktikum ini bertujuan untuk melatih kemampuan mahasiswa dalam menganalisis sumber kerentanan, baik yang berasal dari kelemahan algoritma kriptografi itu sendiri maupun dari kesalahan implementasi dan konfigurasi sistem. Dengan demikian, mahasiswa tidak hanya memahami teori kriptografi, tetapi juga mampu mengevaluasi penerapannya secara kritis dalam sistem informasi.
+
+Tujuan akhir dari praktikum ini adalah agar mahasiswa mampu memberikan rekomendasi solusi keamanan yang tepat dan relevan, seperti pemilihan algoritma kriptografi yang lebih kuat, penerapan konfigurasi keamanan yang benar serta penggunaan best practice keamanan modern untuk meningkatkan perlindungan sistem informasi terhadap serangan siber.
 ---
 
 ## 2. Dasar Teori
-(Ringkas teori relevan (cukup 2–3 paragraf).  
-Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
+Kriptografi merupakan ilmu yang mempelajari teknik pengamanan informasi dengan cara mengubah data menjadi bentuk yang tidak dapat dipahami oleh pihak yang tidak berwenang. Tujuan utama kriptografi meliputi kerahasiaan (confidentiality), integritas (integrity), autentikasi (authentication), dan non-repudiation, sehingga dalam sistem informasi modern, kriptografi digunakan secara luas pada proses autentikasi pengguna, penyimpanan password, komunikasi jaringan, serta perlindungan data sensitif.
 
+Namun, seiring berkembangnya teknologi komputasi, berbagai algoritma kriptografi lama mulai menunjukkan kelemahannya sepertyi Algoritma hash seperti MD5 dan SHA-1, yang dahulu dianggap aman, kini terbukti rentan terhadap serangan brute force dan collision attack. Serangan brute force bekerja dengan mencoba semua kemungkinan kombinasi kunci atau password hingga menemukan yang cocok, sedangkan dictionary attack menggunakan daftar kata sandi umum untuk mempercepat proses pencarian.
+
+Selain kelemahan algoritmanya banyak serangan kriptografi juga terjadi akibat kesalahan implementasi. Contohnya adalah penyimpanan password tanpa salt, penggunaan panjang kunci yang terlalu pendek, serta konfigurasi protokol keamanan yang tidak tepat. Oleh karena itu, analisis serangan kriptografi tidak hanya berfokus pada algoritma yang digunakan, tetapi juga pada bagaimana algoritma tersebut diimplementasikan dalam sistem nyata.
 ---
 
 ## 3. Alat dan Bahan
@@ -29,7 +35,7 @@ Contoh: definisi cipher klasik, konsep modular aritmetika, dll.  )
 ## 4. Langkah Percobaan
 (Tuliskan langkah yang dilakukan sesuai instruksi.  
 Contoh format:
-1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
+1. Membuat file `caesar_cipher.py` di folder `praktikum.m/week2-cryptosystem/src/`.
 2. Menyalin kode program dari panduan praktikum.
 3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
 
@@ -66,10 +72,13 @@ Hasil eksekusi program Caesar Cipher:
 ## 7. Jawaban Pertanyaan
 (Jawab pertanyaan diskusi yang diberikan pada modul.  
 - 1: Mengapa banyak sistem lama masih rentan terhadap brute force atau dictionary attack?
-Jawab:
+Jawab: karena dibangun pada masa ketika ancaman siber belum berkembang sekompleks saat ini. Pada saat itu, algoritma kriptografi seperti MD5 atau SHA-1 masih dianggap aman dan cukup kuat, sehingga digunakan secara luas untuk penyimpanan password dan autentikasi. Selain itu, kebijakan keamanan yang diterapkan pada sistem lama umumnya masih sederhana, seperti penggunaan password pendek, tidak adanya pembatasan percobaan login, serta ketiadaan mekanisme tambahan seperti salt atau key stretching, yang membuat proses penebakan password menjadi jauh lebih mudah bagi penyerang.
+
+Selain faktor teknologi, kerentanan ini juga disebabkan oleh ketergantungan organisasi pada sistem warisan (*legacy system*) yang sulit atau mahal untuk diperbarui. Banyak organisasi enggan mengganti atau memodernisasi sistem lama karena alasan biaya, risiko gangguan operasional, atau keterbatasan sumber daya. Akibatnya, sistem tersebut tetap menggunakan algoritma dan konfigurasi keamanan yang sudah tidak relevan dengan kondisi ancaman saat ini jadi dengan meningkatnya kemampuan komputasi dan tersedianya tools otomatis, penyerang dapat dengan mudah mengeksploitasi kelemahan tersebut melalui brute force maupun dictionary attack.
+
 
 - 2: Apa bedanya kelemahan algoritma dengan kelemahan implementasi?
-Jawab: Perbedaan antara **kelemahan algoritma** dan **kelemahan implementasi** terletak pada sumber utama kerentanannya. Kelemahan algoritma berasal dari **desain matematis atau konsep dasar algoritma kriptografi itu sendiri, sehingga meskipun algoritma tersebut diimplementasikan dengan benar, ia tetap memiliki celah keamanan. Contohnya adalah algoritma hash MD5 yang secara struktural rentan terhadap collision attack; kelemahan ini tidak dapat diperbaiki hanya dengan konfigurasi atau pemrograman yang lebih baik, melainkan harus diatasi dengan **mengganti algoritma** tersebut dengan yang lebih aman.
+Jawab: Perbedaan antara kelemahan algoritma dan kelemahan implementasi terletak pada sumber utama kerentanannya. Kelemahan algoritma berasal dari desain matematis atau konsep dasar algoritma kriptografi itu sendiri, sehingga meskipun algoritma tersebut diimplementasikan dengan benar, ia tetap memiliki celah keamanan. Contohnya adalah algoritma hash MD5 yang secara struktural rentan terhadap collision attack; kelemahan ini tidak dapat diperbaiki hanya dengan konfigurasi atau pemrograman yang lebih baik, melainkan harus diatasi dengan mengganti algoritma tersebut dengan yang lebih aman.
 
 Sebaliknya, kelemahan implementasi muncul akibat kesalahan dalam penerapan algoritma yang sebenarnya sudah aman. Hal ini bisa berupa penggunaan parameter yang tidak tepat, seperti panjang kunci yang terlalu pendek, tidak menggunakan salt pada hashing password, penyimpanan kunci enkripsi secara tidak aman, atau kesalahan konfigurasi protokol keamanan seperti TLS. Dalam kasus ini, masalah bukan pada algoritmanya, tetapi pada cara algoritma tersebut digunakan dalam sistem, sehingga celah keamanan masih dapat dieksploitasi oleh penyerang.
 
@@ -77,7 +86,7 @@ Dengan demikian, memahami perbedaan kedua jenis kelemahan ini sangat penting dal
 
 
 3. Bagaimana organisasi dapat memastikan sistem kriptografi mereka tetap aman di masa depan?
-Jawab: Organisasi dapat memastikan sistem kriptografi mereka tetap aman di masa depan dengan menerapkan pendekatan keamanan yang berkelanjutan dan adaptif** terhadap perkembangan teknologi dan ancaman siber. Salah satu langkah utama adalah melakukan pembaruan dan audit keamanan secara berkala terhadap algoritma, protokol, dan konfigurasi kriptografi yang digunakan. Algoritma yang sudah dianggap lemah atau usang, seperti MD5 atau SHA-1, harus segera digantikan dengan standar kriptografi modern yang direkomendasikan, seperti SHA-256, AES, TLS versi terbaru, serta algoritma password hashing yang kuat seperti bcrypt, scrypt, atau Argon2.
+Jawab: Organisasi dapat memastikan sistem kriptografi mereka tetap aman di masa depan dengan menerapkan pendekatan keamanan yang berkelanjutan dan adaptif terhadap perkembangan teknologi dan ancaman siber. Salah satu langkah utama adalah melakukan pembaruan dan audit keamanan secara berkala terhadap algoritma, protokol, dan konfigurasi kriptografi yang digunakan. Algoritma yang sudah dianggap lemah atau usang, seperti MD5 atau SHA-1, harus segera digantikan dengan standar kriptografi modern yang direkomendasikan, seperti SHA-256, AES, TLS versi terbaru, serta algoritma password hashing yang kuat seperti bcrypt, scrypt, atau Argon2.
 
 Selain itu, organisasi perlu memastikan bahwa implementasi kriptografi dilakukan sesuai best practice, bukan hanya memilih algoritma yang kuat. Banyak kegagalan keamanan terjadi bukan karena algoritmanya lemah, tetapi karena kesalahan implementasi, seperti manajemen kunci yang buruk, penggunaan parameter default yang tidak aman, atau penyimpanan kunci secara tidak terlindungi. Oleh karena itu, penerapan kebijakan manajemen kunci yang ketat, penggunaan Hardware Security Module (HSM), serta pembatasan akses terhadap material kriptografi menjadi faktor penting dalam menjaga keamanan jangka panjang.
 
@@ -110,7 +119,7 @@ Contoh:
 ```
 commit abc12345
 Author: Ratna Rizka Maharani <ratnarizka033@gmail.com>
-Date:   wednesday 17 desember 2025
+Date:   wednesday 23 desember 2025
 
     week14-analisis-serangan: implementasi Analisis Serangan Kriptografi dan laporan )
 ```
