@@ -9,7 +9,7 @@ Kelas: 5IKRA
 
 ## 1. Tujuan
 (Tuliskan tujuan pembelajaran praktikum sesuai modul.)
-Tujuan dari praktikum menurut saya Analisis Serangan Kriptografi ini untuk memberikan pemahaman yang mendalam kepada mahasiswa mengenai berbagai jenis serangan yang dapat terjadi pada sistem kriptografi dalam dunia nyata. Melalui praktikum ini, mahasiswa diharapkan mampu mengidentifikasi bentuk serangan kriptografi yang umum, seperti brute force attack, dictionary attack, dan man-in-the-middle attack, juga memahami bagaimana serangan tersebut dapat mengeksploitasi kelemahan sistem keamanan.
+Tujuan dari saya praktikum yaitu analisis Serangan Kriptografi ini untuk memberikan pemahaman yang mendalam kepada mahasiswa mengenai berbagai jenis serangan yang dapat terjadi pada sistem kriptografi dalam dunia nyata. Melalui praktikum ini, mahasiswa diharapkan mampu mengidentifikasi bentuk serangan kriptografi yang umum, seperti brute force attack, dictionary attack, dan man-in-the-middle attack, juga memahami bagaimana serangan tersebut dapat mengeksploitasi kelemahan sistem keamanan.
 
 Selain itu, praktikum ini bertujuan untuk melatih kemampuan mahasiswa dalam menganalisis sumber kerentanan, baik yang berasal dari kelemahan algoritma kriptografi itu sendiri maupun dari kesalahan implementasi dan konfigurasi sistem. Dengan demikian, mahasiswa tidak hanya memahami teori kriptografi, tetapi juga mampu mengevaluasi penerapannya secara kritis dalam sistem informasi.
 
