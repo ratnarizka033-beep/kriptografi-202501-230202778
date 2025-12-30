@@ -35,9 +35,9 @@ Selain kelemahan algoritmanya banyak serangan kriptografi juga terjadi akibat ke
 ## 4. Langkah Percobaan
 (Tuliskan langkah yang dilakukan sesuai instruksi.  
 Contoh format:
-1. Membuat file `caesar_cipher.py` di folder `praktikum.m/week2-cryptosystem/src/`.
+1. Membuat file `week14-analisis-serangan.py` di folder `praktikum.m/week14-analisis-serangansrc/`.
 2. Menyalin kode program dari panduan praktikum.
-3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
+3. Menjalankan program dengan perintah `python week14-analisis_serangan.py`.)
 
 ---
 
@@ -46,28 +46,56 @@ Contoh format:
 Gunakan blok kode:
 
 ```python
-# contoh potongan kode
-def encrypt(text, key):
-    return ...
-```
-)
+import hashlib
 
----
+# Fungsi untuk membuat hash MD5
+def hash_md5(password):
+    return hashlib.md5(password.encode()).hexdigest()
+
+# Contoh password asli
+password_asli = "admin123"
+
+# Hash password
+hash_target = hash_md5(password_asli)
+print("Hash MD5 Target:", hash_target)
+
+# Daftar kata (dictionary attack)
+wordlist = [
+    "123456", "password", "admin", "admin123", "qwerty",
+    "letmein", "12345", "root"
+]
+
+# Proses brute force / dictionary attack
+def brute_force_md5(hash_target, wordlist):
+    for word in wordlist:
+        hashed = hash_md5(word)
+        print(f"Mencoba: {word} -> {hashed}")
+        if hashed == hash_target:
+            print("\n[✓] Password ditemukan!")
+            print("Password:", word)
+            return
+    print("\n[✗] Password tidak ditemukan.")
+
+# Eksekusi program
+brute_force_md5(hash_target, wordlist)
+
+
 
 ## 6. Hasil dan Pembahasan
-(- Lampirkan screenshot hasil eksekusi program (taruh di folder `screenshots/`).  
+- Lampirkan screenshot hasil eksekusi program (taruh di folder 'screenshots/`).  
 - Berikan tabel atau ringkasan hasil uji jika diperlukan.  
 - Jelaskan apakah hasil sesuai ekspektasi.  
 - Bahas error (jika ada) dan solusinya. 
 
 Hasil eksekusi program Caesar Cipher:
 
-![Hasil Eksekusi](screenshots/output.png)
+![Hasil Eksekusi](screenshots/output.png) 
+Follow link (screenshots/analisis-serangan.png) 
 ![Hasil Input](screenshots/input.png)
 ![Hasil Output](screenshots/output.png)
 )
 
----
+
 
 ## 7. Jawaban Pertanyaan
 (Jawab pertanyaan diskusi yang diberikan pada modul.  
@@ -93,14 +121,13 @@ Selain itu, organisasi perlu memastikan bahwa implementasi kriptografi dilakukan
 Terakhir, organisasi harus berinvestasi pada peningkatan kapasitas sumber daya manusia dan kesiapan menghadapi ancaman masa depan. Hal ini dapat dilakukan melalui pelatihan keamanan siber bagi tim IT, mengikuti standar dan regulasi keamanan internasional, serta melakukan penetration testing dan threat assessment secara rutin. Dengan memantau perkembangan teknologi baru, termasuk ancaman dari komputasi kuantum, dan menyiapkan strategi migrasi ke algoritma yang tahan terhadap ancaman tersebut, organisasi dapat menjaga sistem kriptografi mereka tetap relevan, aman, dan terpercaya di masa depan.
 
 )
----
+
 
 ## 8. Kesimpulan
-Berdasarkan analisis serangan kriptografi yang telah dilakukan, dapat disimpulkan bahwa banyak kerentanan sistem informasi modern berasal dari penggunaan algoritma kriptografi yang sudah usang, konfigurasi keamanan yang tidak tepat, serta lemahnya kebijakan pengelolaan kunci dan password. Studi kasus yang dianalisis menunjukkan bahwa serangan seperti brute force, dictionary attack, maupun man-in-the-middle dapat dengan mudah berhasil apabila sistem tidak menerapkan standar kriptografi terbaru dan best practice keamanan. Oleh karena itu, penerapan algoritma kriptografi modern, audit keamanan berkala, serta peningkatan kesadaran dan kompetensi sumber daya manusia menjadi faktor kunci untuk menjaga keamanan sistem informasi di masa depan.
+Berdasarkan analisis serangan kriptografi yang telah dilakukan, dapat disimpulkan bahwa banyak kerentanan sistem informasi modern berasal dari penggunaan algoritma kriptografi yang sudah usang, konfigurasi keamanan yang tidak tepat, serta lemahnya kebijakan pengelolaan kunci dan password. Studi kasus yang dianalisis menunjukkan bahwa serangan seperti brute force, dictionary attack, maupun man in the-middle dapat dengan mudah berhasil apabila sistem tidak menerapkan standar kriptografi terbaru dan best practice keamanan. Oleh karena itu, penerapan algoritma kriptografi modern, audit keamanan berkala, serta peningkatan kesadaran dan kompetensi sumber daya manusia menjadi faktor kunci untuk menjaga keamanan sistem informasi di masa depan.
 
 
 
----
 
 ## 9. Daftar Pustaka
 (Cantumkan referensi yang digunakan.  
@@ -114,7 +141,7 @@ Contoh:
 ---
 
 ## 10. Commit Log
-(Tuliskan bukti commit Git yang relevan.  
+Tuliskan bukti commit Git yang relevan.  
 Contoh:
 ```
 commit abc12345
