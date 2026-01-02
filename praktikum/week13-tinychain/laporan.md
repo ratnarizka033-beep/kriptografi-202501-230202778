@@ -8,19 +8,19 @@ Kelas: 5IKRA
 ---
 
 ## 1. Tujuan
-(Tuliskan tujuan pembelajaran praktikum sesuai modul.)
-Tujuan dari praktikum ini menurut saya agar memberikan pemahaman yang komprehensif mengenai konsep dasar blockchain dengan fokus pada peran fungsi hash dan mekanisme Proof of Work (PoW). Melalui praktikum ini, mahasiswa diharapkan mampu mengimplementasikan blockchain sederhana menggunakan bahasa pemrograman Python, sehingga memahami proses mining blok, serta menganalisis bagaimana PoW berkontribusi terhadap keamanan dan keandalan sistem cryptocurrency. Selain itu, praktikum ini juga bertujuan melatih kemampuan analisis mahasiswa terhadap kelebihan dan keterbatasan PoW dalam penerapan nyata.
+Tujuan dari praktikum TinyChain ini menurut saya yaitu untuk memahami konsep dasar sistem rantai blok (chain) dalam skala sederhana melalui simulasi yang disebut TinyChain. TinyChain dirancang sebagai versi ringan dari blockchain yang bertujuan edukatif, sehingga mahasiswa dapat memahami mekanisme dasar seperti pembuatan blok, penggunaan fungsi hash, serta proses Proof of Work (PoW) tanpa kompleksitas sistem blockchain sesungguhnya.
+
+Selain itu, praktikum ini bertujuan untuk melatih mahasiswa dalam mengimplementasikan konsep kriptografi menggunakan bahasa pemrograman Python, khususnya dalam membangun struktur data, melakukan hashing, serta memahami bagaimana keamanan data dijaga melalui mekanisme komputasi. Dengan mempelajari TinyChain, mahasiswa diharapkan mampu memahami alur kerja blockchain sebelum mempelajari sistem yang lebih kompleks seperti Bitcoin atau Ethereum.
 ---
 
 ## 2. Dasar Teori
-Blockchain merupakan sebuah teknologi buku besar terdistribusi (distributed ledger) yang menyimpan data dalam bentuk blok-blok yang saling terhubung satu sama lain. Setiap blok berisi data transaksi, timestamp, hash dari blok sebelumnya, dan hash milik blok itu sendiri. Keterkaitan antarblok ini membentuk sebuah rantai (chain) yang bersifat immutable, artinya data yang telah tersimpan tidak dapat diubah tanpa memodifikasi seluruh blok setelahnya.
+TinyChain merupakan representasi sederhana dari teknologi blockchain yang digunakan untuk tujuan pembelajaran. Dalam TinyChain, setiap blok berisi data transaksi, hash dari blok sebelumnya, serta nilai nonce yang digunakan dalam proses Proof of Work.
 
-Fungsi hash kriptografis adalah komponen utama dalam blockchain. Fungsi hash seperti SHA-256 memiliki sifat one-way, collision resistant, dan avalanche effect, di mana perubahan kecil pada input akan menghasilkan perubahan besar pada output hash. Sifat-sifat ini menjadikan fungsi hash sangat efektif dalam menjaga integritas data dan mendeteksi adanya manipulasi pada isi blok.
+Fungsi hash memiliki peran penting dalam TinyChain. Hash berfungsi sebagai sidik jari digital yang unik untuk setiap blok. Perubahan sekecil apa pun pada data akan menghasilkan nilai hash yang berbeda secara signifikan. Hal ini membuat manipulasi data menjadi sangat sulit karena perubahan pada satu blok akan memengaruhi seluruh rantai blok berikutnya.
 
-Proof of Work (PoW) yaitu mekanisme konsensus yang digunakan untuk memvalidasi transaksi dan menambahkan blok baru ke dalam blockchain. Dalam PoW, penambang harus mencari nilai nonce yang menghasilkan hash dengan pola tertentu (misalnya diawali dengan sejumlah nol). Proses ini membutuhkan daya komputasi yang besar sehingga menyulitkan pihak tidak bertanggung jawab untuk memalsukan transaksi. Semakin tinggi tingkat kesulitan (difficulty), semakin aman blockchain, namun dengan konsekuensi meningkatnya konsumsi energi.
+Proof of Work (PoW) merupakan mekanisme konsensus yang digunakan untuk menentukan apakah suatu blok sah untuk ditambahkan ke dalam rantai. Pada TinyChain, PoW dilakukan dengan mencari nilai nonce sehingga hasil hash memenuhi kriteria tertentu, misalnya diawali dengan sejumlah angka nol. Proses ini membutuhkan percobaan berulang (brute force) sehingga membutuhkan waktu dan sumber daya komputasi.
 
-Selain itu, mekanisme Proof of Work juga berperan penting dalam menjaga konsistensi dan kepercayaan pada jaringan blockchain yang bersifat terdesentralisasi. Karena tidak ada otoritas pusat yang mengatur validasi transaksi, PoW memastikan bahwa setiap blok baru hanya dapat ditambahkan setelah melalui proses komputasi yang dapat diverifikasi oleh seluruh node dalam jaringan. Hal ini membuat konsensus tercapai secara kolektif, di mana mayoritas node sepakat terhadap rantai blok yang valid. Dengan demikian, PoW tidak hanya berfungsi sebagai alat validasi teknis, tetapi juga sebagai mekanisme ekonomi dan keamanan yang mencegah serangan seperti manipulasi data dan double spending.
-
+Melalui TinyChain, konsep keamanan seperti integritas data, keaslian informasi, dan ketahanan terhadap manipulasi dapat dipahami secara praktis meskipun sistemnya jauh lebih sederhana dibandingkan blockchain sesungguhnya.
 
 ---
 
@@ -117,30 +117,20 @@ Hasil eksekusi program Caesar Cipher:
 ---
 
 ## 7. Jawaban Pertanyaan
-(Jawab pertanyaan diskusi yang diberikan pada modul.  
-- 1: Mengapa fungsi hash sangat penting dalam blockchain?  
-Jawab: Fungsi hash sangat penting dalam blockchain karena berperan utama dalam menjaga integritas dan keutuhan data pada setiap blok. Setiap blok memiliki nilai hash unik yang dihasilkan dari data transaksi, timestamp, hash blok sebelumnya, dan nonce. Jika terjadi perubahan sekecil apa pun pada isi blok, nilai hash akan berubah secara signifikan, sehingga ketidaksesuaian tersebut dapat langsung terdeteksi oleh node lain di jaringan. Mekanisme ini membuat data dalam blockchain sulit dimanipulasi tanpa diketahui.
+1. Mengapa fungsi hash sangat penting dalam blockchain?  
+Jawab: Fungsi hash sangat penting dalam blockchain karena berperan sebagai pengaman utama data yang tersimpan di dalam blok. Setiap blok memiliki hash unik yang dihasilkan dari data transaksi dan hash blok sebelumnya. Jika satu data saja diubah, maka nilai hash akan berubah secara signifikan sehingga rantai blok menjadi tidak valid. Hal ini membuat blockchain bersifat immutabel (tidak mudah diubah). Selain itu, fungsi hash juga memastikan integritas data, menjaga keamanan transaksi, serta digunakan dalam proses validasi seperti Proof of Work untuk menentukan keabsahan blok baru.
 
-Oleh karena itu, fungsi hash juga menjadi penghubung antarblok yang membentuk rantai blockchain. Hash dari blok sebelumnya disimpan di dalam blok berikutnya, sehingga menciptakan keterkaitan yang kuat antarblok. Struktur ini memastikan bahwa untuk mengubah satu blok, penyerang harus mengubah seluruh blok setelahnya, yang membutuhkan daya komputasi sangat besar. Dengan sifat one-way dan collision resistant, fungsi hash mendukung keamanan transparansi, dan keandalan blockchain dalam lingkungan terdesentralisasi.
+2. Bagaimana Proof of Work mencegah double spending? 
+Jawab: Proof of Work (PoW) mencegah double spending dengan mewajibkan setiap transaksi diverifikasi dan dimasukkan ke dalam blok yang harus disetujui oleh jaringan melalui proses penambangan. Penambang harus memecahkan persoalan kriptografi yang sulit sebelum sebuah blok dapat ditambahkan ke blockchain. Setelah transaksi tercatat dalam blok dan dikonfirmasi oleh mayoritas jaringan, transaksi tersebut tidak dapat diubah atau digunakan kembali. Jika seseorang mencoba melakukan double spending, jaringan akan menolak transaksi tersebut karena tidak sesuai dengan rantai terpanjang dan sah.
 
-
-- 2: Bagaimana Proof of Work mencegah double spending?  
-Jawab: Proof of Work mencegah double spending dengan cara-> mewajibkan setiap transaksi untuk divalidasi melalui proses komputasi yang kompleks sebelum dapat dimasukkan ke dalam sebuah blok. Setelah transaksi dikonfirmasi dan blok berhasil ditambang, transaksi tersebut menjadi bagian dari blockchain yang bersifat permanen dan tidak dapat diubah. Jika seseorang mencoba menggunakan koin yang sama untuk dua transaksi berbeda, jaringan akan menolak transaksi kedua karena catatan transaksi sebelumnya sudah tercatat dan diverifikasi oleh mayoritas node dalam jaringan.
-
-Selain itu, untuk mengubah atau membatalkan transaksi yang sudah tercatat, penyerang harus menambang ulang blok tersebut beserta seluruh blok setelahnya dengan kecepatan yang melebihi jaringan secara keseluruhan. Hal ini berarti penyerang harus menguasai sebagian besar kekuatan komputasi (51% attack), yang secara praktis sangat sulit dan membutuhkan biaya yang sangat besar. Dengan demikian, Proof of Work menciptakan hambatan teknis dan ekonomi yang efektif dalam mencegah terjadinya double spending pada sistem blockchain.
+3. Apa kelemahan dari PoW dalam hal efisiensi energi?  
+Jawab: Kelemahan utama Proof of Work adalah konsumsi energi yang sangat besar. Proses penambangan membutuhkan perangkat keras berdaya tinggi yang bekerja terus-menerus untuk menyelesaikan perhitungan matematika kompleks. Akibatnya, PoW memerlukan listrik dalam jumlah besar, meningkatkan biaya operasional, dan berdampak negatif terhadap lingkungan. Selain itu, sistem ini cenderung menguntungkan pihak yang memiliki sumber daya komputasi besar, sehingga berpotensi menimbulkan sentralisasi penambangan.
 
 
-- 3: Apa kelemahan dari PoW dalam hal efisiensi energi?
-Jawab: Kelemahan utama Proof of Work dalam hal efisiensi energi adalah tingginya konsumsi daya listrik yang dibutuhkan untuk melakukan proses mining. Penambang harus menjalankan perhitungan kriptografis secara terus-menerus untuk menemukan nilai nonce yang sesuai dengan tingkat kesulitan tertentu, sehingga membutuhkan perangkat keras berdaya tinggi dan energi yang besar. Pada jaringan blockchain berskala besar, aktivitas ini dapat menyebabkan pemborosan energi yang signifikan, meningkatkan biaya operasional, serta menimbulkan dampak lingkungan seperti emisi karbon. Selain itu adanya kebutuhan energi yang tinggi juga dapat memicu sentralisasi mining, karena hanya pihak dengan sumber daya besar yang mampu berpartisipasi secara efektif.
-
-)
 ---
 
 ## 8. Kesimpulan
-Menurut saya dari praktikum ini dapat disimpulkan bahwa fungsi hash dan Proof of Work merupakan komponen penting dalam keamanan blockchain. Implementasi TinyChain menunjukkan PoW dalam menjaga integritas data, meskipun memiliki kelemahan dari sisi efisiensi energi.
-
-Selain itu, praktikum ini memberikan pemahaman nyata mengenai bagaimana proses mining bekerja dan mengapa blockchain sulit untuk dimanipulasi. Melalui simulasi sederhana TinyChain, dapat dilihat bahwa perubahan kecil pada data akan memengaruhi seluruh rantai blok sehingga membutuhkan usaha komputasi yang sangat besar untuk melakukan pemalsuan. Hal ini menegaskan bahwa meskipun Proof of Work memiliki keterbatasan dalam konsumsi energi, mekanisme ini tetap efektif dalam menjamin keamanan, keandalan, dan kepercayaan pada sistem blockchain.
-
+ Jadi kesimpulannya yaitu dari TinyChain merupakan media pembelajaran yang efektif untuk memahami prinsip dasar teknologi blockchain, khususnya mekanisme Proof of Work dan penggunaan fungsi hash. Melalui simulasi ini, mahasiswa dapat memahami bagaimana sebuah blok dibuat, bagaimana data diamankan, serta bagaimana proses validasi dilakukan sebelum sebuah blok ditambahkan ke dalam rantai. Meskipun bersifat sederhana, TinyChain memberikan gambaran nyata mengenai cara kerja blockchain dan menjadi dasar penting sebelum mempelajari sistem blockchain berskala besar yang digunakan pada dunia nyata.
 ---
 
 ## 9. Daftar Pustaka
