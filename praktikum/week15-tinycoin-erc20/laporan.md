@@ -8,15 +8,11 @@ Kelas: 5IKRA
 ---
 
 ## 1. Tujuan
-Menurut saya tujuan dari praktikum ini yaitu untuk memahami konsep dasar teknologi blockchain melalui implementasi smart contract berbasis standar ERC20. jadi mahasiswa seperti sya diharapkan mampu mengembangkan token digital sederhana menggunakan bahasa pemrograman Solidity, memahami mekanisme kerja smart contract di jaringan Ethereum, serta mendokumentasikan proses pengembangan proyek menggunakan sistem kontrol versi Git. Selain itu, praktikum ini bertujuan untuk melatih mahasiswa dalam menganalisis aspek keamanan dasar pada smart contract.
+
 ---
 
 ## 2. Dasar Teori
-Menurut saya blockchain yaitu teknologi buku besar terdistribusi (distributed ledger) yang mencatat transaksi secara permanen dan tidak dapat diubah. Setiap transaksi merupakan diverifikasi oleh jaringan dan disimpan dalam blok yang saling terhubung menggunakan kriptografi. Salah satu platform blockchain paling populer yakni Ethereum, yang memungkinkan pengembang membuat aplikasi terdesentralisasi (dApps) melalui smart contract.
 
-Smart contract adalah program yang berjalan secara otomatis di atas blockchain ketika kondisi tertentu terpenuhi. Pada Ethereum, smart contract umumnya ditulis menggunakan bahasa Solidity. Salah satu standar smart contract yang paling banyak digunakan adalah ERC20, yaitu standar teknis untuk pembuatan token yang dapat dipertukarkan (fungible token). ERC20 mendefinisikan fungsi-fungsi utama sperti transfer, balanceof, dan totalsupply
-
-Jadi dengan menggunakan standar ERC20, token yang dibuat dapat dengan mudah diintegrasikan dengan wallet, exchange, dan aplikasi blockchain lainnya. Oleh karena itu, pemahaman mengenai implementasi ERC20 menjadi bagian penting dalam pembelajaran kriptografi modern dan teknologi blockchain.
 
 ---
 
@@ -31,7 +27,7 @@ Jadi dengan menggunakan standar ERC20, token yang dibuat dapat dengan mudah diin
 ## 4. Langkah Percobaan
 (Tuliskan langkah yang dilakukan sesuai instruksi.  
 Contoh format:
-1. Membuat file `caesar_cipher.py` di folder `praktikum/week2-cryptosystem/src/`.
+1. Membuat file `caesar_cipher.py` di folder `praktikum/week15-tinycoin-erc20/src/`.
 2. Menyalin kode program dari panduan praktikum.
 3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
 
@@ -107,5 +103,5 @@ commit a7f9c2e
 Author: Ratna Rizka Maharani <ratnarizka033@gmail.com>
 Date:   Friday 02 january 2026
 
-    week2-cryptosystem: implementasi Caesar Cipher dan laporan akhir )
+    week15-tinycoin-erc20: Implementasi tinyCoin Smart Contract ERC20 dan laporan akhir )
 ```
