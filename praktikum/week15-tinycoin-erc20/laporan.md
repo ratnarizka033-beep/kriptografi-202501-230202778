@@ -105,7 +105,7 @@ Contoh:
 ```
 commit a7f9c2e
 Author: Ratna Rizka Maharani <ratnarizka033@gmail.com>
-Date:   Jumat, 26 desember 2025
+Date:   Friday 02 january 2026
 
     week2-cryptosystem: implementasi Caesar Cipher dan laporan akhir )
 ```

@@ -9,7 +9,7 @@ Kelas: 5IKRA
 
 ## 1. Tujuan
 (Tuliskan tujuan pembelajaran praktikum sesuai modul.)
-Tujuan dari saya praktikum yaitu analisis Serangan Kriptografi ini untuk memberikan pemahaman yang mendalam kepada mahasiswa mengenai berbagai jenis serangan yang dapat terjadi pada sistem kriptografi dalam dunia nyata. Melalui praktikum ini, mahasiswa diharapkan mampu mengidentifikasi bentuk serangan kriptografi yang umum, seperti brute force attack, dictionary attack, dan man-in-the-middle attack, juga memahami bagaimana serangan tersebut dapat mengeksploitasi kelemahan sistem keamanan.
+Tujuan dari saya praktikum analisis Serangan Kriptografi ini untuk memberikan pemahaman yang mendalam kepada mahasiswa mengenai berbagai jenis serangan yang dapat terjadi pada sistem kriptografi dalam dunia nyata. Melalui praktikum ini, mahasiswa diharapkan mampu mengidentifikasi bentuk serangan kriptografi yang umum, seperti brute force attack, dictionary attack, dan man-in-the-middle attack, juga memahami bagaimana serangan tersebut dapat mengeksploitasi kelemahan sistem keamanan.
 
 Selain itu, praktikum ini bertujuan untuk melatih kemampuan mahasiswa dalam menganalisis sumber kerentanan, baik yang berasal dari kelemahan algoritma kriptografi itu sendiri maupun dari kesalahan implementasi dan konfigurasi sistem. Dengan demikian, mahasiswa tidak hanya memahami teori kriptografi, tetapi juga mampu mengevaluasi penerapannya secara kritis dalam sistem informasi.
 
@@ -89,23 +89,21 @@ brute_force_md5(hash_target, wordlist)
 
 Hasil eksekusi program Caesar Cipher:
 
-![Hasil Eksekusi](screenshots/output.png) 
-Follow link (screenshots/analisis-serangan.png) 
+![Hasil Eksekusi](screenshots/analisis-serangan.png) 
 ![Hasil Input](screenshots/input.png)
 ![Hasil Output](screenshots/output.png)
 )
 
 
-
 ## 7. Jawaban Pertanyaan
 (Jawab pertanyaan diskusi yang diberikan pada modul.  
-- 1: Mengapa banyak sistem lama masih rentan terhadap brute force atau dictionary attack?
-Jawab: karena dibangun pada masa ketika ancaman siber belum berkembang sekompleks saat ini. Pada saat itu, algoritma kriptografi seperti MD5 atau SHA-1 masih dianggap aman dan cukup kuat, sehingga digunakan secara luas untuk penyimpanan password dan autentikasi. Selain itu, kebijakan keamanan yang diterapkan pada sistem lama umumnya masih sederhana, seperti penggunaan password pendek, tidak adanya pembatasan percobaan login, serta ketiadaan mekanisme tambahan seperti salt atau key stretching, yang membuat proses penebakan password menjadi jauh lebih mudah bagi penyerang.
+- 1: Mengapa banyak sistem lama masih rentan terhadap brute force atau dictionary attack
+Jawab: yaitiu karena dibangun pada masa ketika ancaman siber belum berkembang sekompleks saat ini. Pada saat itu, algoritma kriptografi seperti MD5 atau SHA-1 masih dianggap aman dan cukup kuat, sehingga digunakan secara luas untuk penyimpanan password dan autentikasi. Selain itu, kebijakan keamanan yang diterapkan pada sistem lama umumnya masih sederhana, seperti penggunaan password pendek, tidak adanya pembatasan percobaan login, serta ketiadaan mekanisme tambahan seperti salt atau key stretching, yang membuat proses penebakan password menjadi jauh lebih mudah bagi penyerang.
 
-Selain faktor teknologi, kerentanan ini juga disebabkan oleh ketergantungan organisasi pada sistem warisan (*legacy system*) yang sulit atau mahal untuk diperbarui. Banyak organisasi enggan mengganti atau memodernisasi sistem lama karena alasan biaya, risiko gangguan operasional, atau keterbatasan sumber daya. Akibatnya, sistem tersebut tetap menggunakan algoritma dan konfigurasi keamanan yang sudah tidak relevan dengan kondisi ancaman saat ini jadi dengan meningkatnya kemampuan komputasi dan tersedianya tools otomatis, penyerang dapat dengan mudah mengeksploitasi kelemahan tersebut melalui brute force maupun dictionary attack.
+Selain faktor teknologi, kerentanan ini juga disebabkan oleh ketergantungan organisasi pada sistem warisan (legacy system) yang sulit atau mahal untuk diperbarui. Banyak organisasi enggan mengganti atau memodernisasi sistem lama karena alasan biaya, risiko gangguan operasional, atau keterbatasan sumber daya. Akibatnya, sistem tersebut tetap menggunakan algoritma dan konfigurasi keamanan yang sudah tidak relevan dengan kondisi ancaman saat ini jadi dengan meningkatnya kemampuan komputasi dan tersedianya tools otomatis, penyerang dapat dengan mudah mengeksploitasi kelemahan tersebut melalui brute force maupun dictionary attack.
 
 
-- 2: Apa bedanya kelemahan algoritma dengan kelemahan implementasi?
+- 2: Apa bedanya kelemahan algoritma dengan kelemahan implementasi
 Jawab: Perbedaan antara kelemahan algoritma dan kelemahan implementasi terletak pada sumber utama kerentanannya. Kelemahan algoritma berasal dari desain matematis atau konsep dasar algoritma kriptografi itu sendiri, sehingga meskipun algoritma tersebut diimplementasikan dengan benar, ia tetap memiliki celah keamanan. Contohnya adalah algoritma hash MD5 yang secara struktural rentan terhadap collision attack; kelemahan ini tidak dapat diperbaiki hanya dengan konfigurasi atau pemrograman yang lebih baik, melainkan harus diatasi dengan mengganti algoritma tersebut dengan yang lebih aman.
 
 Sebaliknya, kelemahan implementasi muncul akibat kesalahan dalam penerapan algoritma yang sebenarnya sudah aman. Hal ini bisa berupa penggunaan parameter yang tidak tepat, seperti panjang kunci yang terlalu pendek, tidak menggunakan salt pada hashing password, penyimpanan kunci enkripsi secara tidak aman, atau kesalahan konfigurasi protokol keamanan seperti TLS. Dalam kasus ini, masalah bukan pada algoritmanya, tetapi pada cara algoritma tersebut digunakan dalam sistem, sehingga celah keamanan masih dapat dieksploitasi oleh penyerang.
@@ -113,7 +111,7 @@ Sebaliknya, kelemahan implementasi muncul akibat kesalahan dalam penerapan algor
 Dengan demikian, memahami perbedaan kedua jenis kelemahan ini sangat penting dalam analisis keamanan kriptografi. Kelemahan algoritma menuntut pergantian standar kriptografi, sedangkan kelemahan implementasi dapat diperbaiki melalui perbaikan kode, konfigurasi, dan kebijakan keamanan. Organisasi yang mampu mengidentifikasi keduanya dengan tepat akan lebih efektif dalam meningkatkan keamanan sistem informasi secara menyeluruh.
 
 
-3. Bagaimana organisasi dapat memastikan sistem kriptografi mereka tetap aman di masa depan?
+3. Bagaimana organisasi dapat memastikan sistem kriptografi mereka tetap aman di masa depan
 Jawab: Organisasi dapat memastikan sistem kriptografi mereka tetap aman di masa depan dengan menerapkan pendekatan keamanan yang berkelanjutan dan adaptif terhadap perkembangan teknologi dan ancaman siber. Salah satu langkah utama adalah melakukan pembaruan dan audit keamanan secara berkala terhadap algoritma, protokol, dan konfigurasi kriptografi yang digunakan. Algoritma yang sudah dianggap lemah atau usang, seperti MD5 atau SHA-1, harus segera digantikan dengan standar kriptografi modern yang direkomendasikan, seperti SHA-256, AES, TLS versi terbaru, serta algoritma password hashing yang kuat seperti bcrypt, scrypt, atau Argon2.
 
 Selain itu, organisasi perlu memastikan bahwa implementasi kriptografi dilakukan sesuai best practice, bukan hanya memilih algoritma yang kuat. Banyak kegagalan keamanan terjadi bukan karena algoritmanya lemah, tetapi karena kesalahan implementasi, seperti manajemen kunci yang buruk, penggunaan parameter default yang tidak aman, atau penyimpanan kunci secara tidak terlindungi. Oleh karena itu, penerapan kebijakan manajemen kunci yang ketat, penggunaan Hardware Security Module (HSM), serta pembatasan akses terhadap material kriptografi menjadi faktor penting dalam menjaga keamanan jangka panjang.
@@ -124,8 +122,7 @@ Terakhir, organisasi harus berinvestasi pada peningkatan kapasitas sumber daya m
 
 
 ## 8. Kesimpulan
-Berdasarkan analisis serangan kriptografi yang telah dilakukan, dapat disimpulkan bahwa banyak kerentanan sistem informasi modern berasal dari penggunaan algoritma kriptografi yang sudah usang, konfigurasi keamanan yang tidak tepat, serta lemahnya kebijakan pengelolaan kunci dan password. Studi kasus yang dianalisis menunjukkan bahwa serangan seperti brute force, dictionary attack, maupun man in the-middle dapat dengan mudah berhasil apabila sistem tidak menerapkan standar kriptografi terbaru dan best practice keamanan. Oleh karena itu, penerapan algoritma kriptografi modern, audit keamanan berkala, serta peningkatan kesadaran dan kompetensi sumber daya manusia menjadi faktor kunci untuk menjaga keamanan sistem informasi di masa depan.
-
+Berdasarkan analisis serangan kriptografi yang telah dilakukan, dapat disimpulkan bahwa banyak kerentanan sistem informasi modern berasal dari penggunaan algoritma kriptografi yang sudah usang, konfigurasi keamanan yang tidak tepat, serta lemahnya kebijakan pengelolaan kunci dan password. Studi kasus yang dianalisis menunjukkan bahwa serangan seperti brute force, dictionary attack, maupun man-in the-middle dapat dengan mudah berhasil apabila sistem tidak menerapkan standar kriptografi terbaru dan best practice keamanan. Oleh karena itu, penerapan algoritma kriptografi modern, audit keamanan berkala, serta peningkatan kesadaran dan kompetensi sumber daya manusia menjadi faktor kunci untuk menjaga keamanan sistem informasi di masa depan.
 
 
 
@@ -135,10 +132,9 @@ Contoh:
 - Katz, J., & Lindell, Y. *Introduction to Modern Cryptography*.  
 - Stallings, W. *Cryptography and Network Security*.  )
 - Shamir, A. (1979). “How to Share a Secret.” Communications of the ACM.
-- Trappe, W., & Washington, L. C. (2006). Introduction to Cryptography with Coding Theory (2nd ed.). Pearson.
+- Trappe, W., & Washington, L. C. (2006). Introduction to Cryptography with Coding Theory Pearson.
 - Singh, S. (1999). The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography. Anchor Books
 - Menezes, A. J., van Oorschot, P. C., & Vanstone, S. A. (1996). Handbook of Applied Cryptography. CRC Press.
----
 
 ## 10. Commit Log
 Tuliskan bukti commit Git yang relevan.  
