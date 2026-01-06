@@ -8,11 +8,17 @@ Kelas: 5IKRA
 ---
 
 ## 1. Tujuan
+Tujuan dari praktikum ini adalah untuk memahami konsep dasar pembuatan dan implementasi smart contract ERC20 pada jaringan blockchain Ethereum. Melalui praktikum ini, mahasiswa diharapkan mampu mengenal standar ERC20 sebagai dasar pembuatan token digital, termasuk fungsi-fungsi utama seperti transfer token, pengecekan saldo, serta mekanisme persetujuan (approval) dalam transaksi token.
 
+Selain itu, praktikum ini bertujuan untuk memberikan pengalaman praktis dalam proses pengembangan smart contract menggunakan bahasa pemrograman Solidity dan pemanfaatan library Oppenzeppelin. Dengan melakukan implementasi TinyCoin ERC20, mahasiswa dapat memahami bagaimana konsep kriptografi dan blockchain diterapkan secara nyata dalam sistem terdesentralisasi serta meningkatkan pemahaman terhadap keamanan dan transparansi transaksi digital.
 ---
 
 ## 2. Dasar Teori
+Blockchain merupakan teknologi pencatatan data terdistribusi yang bersifat transparan, aman, dan tidak dapat diubah (immutable). Setiap transaksi yang terjadi akan divalidasi oleh jaringan dan disimpan dalam blok yang saling terhubung menggunakan mekanisme kriptografi. Teknologi ini menjadi fondasi utama dalam pengembangan aplikasi terdesentralisasi (decentralized applications / dApps) dan smart contract.
 
+Smart contract adalah program yang berjalan di atas blockchain dan dieksekusi secara otomatis ketika kondisi tertentu terpenuhi. Pada jaringan Ethereum, smart contract ditulis menggunakan bahasa Solidity. Smart contract memungkinkan pembuatan sistem yang tidak bergantung pada pihak ketiga, sehingga meningkatkan kepercayaan dan efisiensi dalam transaksi digital. Namun, karena sifatnya yang tidak dapat diubah setelah dideploy, keamanan dan ketepatan logika kode menjadi hal yang sangat penting.
+
+ERC20 adalah standar teknis yang digunakan untuk pembuatan token fungible pada blockchain Ethereum. Standar ini mendefinisikan sekumpulan fungsi dan event seperti transfer, balanceof, approve, dan transferFrom agar token dapat berinteraksi dengan dompet digital, exchange, dan aplikasi blockchain lainnya secara konsisten. Dengan adanya ERC20, pengembang dapat menciptakan token dengan tingkat interoperabilitas yang tinggi serta meminimalkan kesalahan implementasi melalui penggunaan library tepercaya seperti Openzeppelin.
 
 ---
 
@@ -27,9 +33,9 @@ Kelas: 5IKRA
 ## 4. Langkah Percobaan
 (Tuliskan langkah yang dilakukan sesuai instruksi.  
 Contoh format:
-1. Membuat file `caesar_cipher.py` di folder `praktikum/week15-tinycoin-erc20/src/`.
+1. Membuat file `TinyCoin.sol.py` di folder `praktikum/week15-tinycoin-erc20/src/`.
 2. Menyalin kode program dari panduan praktikum.
-3. Menjalankan program dengan perintah `python caesar_cipher.py`.)
+3. Menjalankan program dengan perintah `python TinyCoin.sol.py`.)
 
 ---
 
@@ -63,7 +69,7 @@ Hasil eksekusi program Caesar Cipher:
 
 ## 7. Jawaban Pertanyaan 
 - Pertanyaan 1: Apa fungsi utama ERC20 dalam ekosistem blockchain?  
-Jawab: Fungsi utama ERC20 dalam ekosistem blockchain sebagai standar teknis yang mengatur bagaimana sebuah token dibuat, dikelola, dan ditransaksikan di jaringan Ethereum. Dengan adanya standar ERC20, token dapat digunakan secara konsisten oleh berbagai aplikasi, dompet digital, dan platform pertukaran tanpa perlu penyesuaian khusus, sehingga meningkatkan interoperabilitas, kemudahan integrasi, serta kepercayaan dalam pengembangan dan penggunaan aset digital.
+Jawab: Fungsi utama ERC20 dalam ekosistem blockchain yaitu sebagai standar teknis yang mengatur bagaimana sebuah token dibuat, dikelola, dan ditransaksikan di jaringan Ethereum. Dengan adanya standar ERC20, token dapat digunakan secara konsisten oleh berbagai aplikasi, dompet digital, dan platform pertukaran tanpa perlu penyesuaian khusus, sehingga meningkatkan interoperabilitas, kemudahan integrasi, serta kepercayaan dalam pengembangan dan penggunaan aset digital.
 
 
 - Pertanyaan 2: Bagaimana mekanisme transfer token bekerja dalam kontrak ERC20? 
@@ -79,7 +85,7 @@ Jawab: Risiko utama dalam implementasi smart contract meliputi adanya bug atau k
 ---
 
 ## 8. Kesimpulan
-menurut saya kesimpulannya yaitu implementasi smart contract ERC20 pada proyek TinyCoin menunjukkan bahwa pembuatan token digital dapat dilakukan secara efisien dan aman dengan memanfaatkan standar yang telah tersedia, sehingga melalui penggunaan Solidity dan library OpenZeppelin, proses pengembangan menjadi lebih terstruktur serta meminimalkan risiko kesalahan keamanan. Praktikum ini memberikan pemahaman nyata mengenai cara kerja blockchain dan penerapan smart contract dalam sistem terdesentralisasi.
+menuryut saya kesimpulannya yaitu implementasi smart contract ERC20 pada proyek TinyCoin menunjukkan bahwa pembuatan token digital dapat dilakukan secara efisien dan aman dengan memanfaatkan standar yang telah tersedia, sehingga melalui penggunaan Solidity dan library OpenZeppelin, proses pengembangan menjadi lebih terstruktur serta meminimalkan risiko kesalahan keamanan. Praktikum ini memberikan pemahaman nyata mengenai cara kerja blockchain dan penerapan smart contract dalam sistem terdesentralisasi.
 
 
 ---
